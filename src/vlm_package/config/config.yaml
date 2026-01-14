@@ -1,0 +1,15 @@
+vlm_node:
+  ros__parameters:
+    model_path: "/home/user/models/vila-1.5-3b"
+    api: "mlc"
+    quantization: "q4f16_ft"
+    min_new_tokens: 25        # Increased slightly to accommodate the text command
+    do_sample: False     
+    history_depth: 1  # 1 for speed, 2-3 for motion awareness     
+    
+    # --- Advanced Prompt for Waypoints + High-Level Commands ---
+    default_query: "You are an F1TENTH racing agent. 
+                    1. Identify the optimal racing line. 
+                    2. Output the [x, y] coordinates of a waypoint 2m ahead AND the desired heading angle in degrees.
+                    3. Evaluate speed: output 'fast', 'slow', or 'stop'.
+                    Format response strictly as: [x.xx, y.yy], angle, command"
