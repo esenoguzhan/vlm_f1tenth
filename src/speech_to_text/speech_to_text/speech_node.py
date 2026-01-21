@@ -84,38 +84,55 @@ class SpeechToTextNode(Node):
                     
                     try:
                         while rclpy.ok():
-                            # This blocks until a phrase is detected
-                            # self.get_logger().info('Waiting for speech input...')
-                            audio = self.recognizer.listen(source, phrase_time_limit=10)
+                            # Increased timeout and phrase limit to capture longer sentences
+                            audio = self.recognizer.listen(source, phrase_time_limit=15, timeout=5)
                             if len(audio.frame_data) == 0:
-                                self.get_logger().warn("Empty audio received, client likely disconnected.")
+                                self.get_logger().warn("Empty audio. Client disconnected?")
                                 break
                                 
                             self.process_audio(audio)
                             
                     except Exception as e:
                         self.get_logger().warn(f"Processing loop error: {e}")
-                        # traceback.print_exc()
                         break 
                         
             except Exception as e:
                 self.get_logger().error(f"Server bind/accept error: {e}")
-                time.sleep(2) # Wait before retry
+                time.sleep(2) 
 
     def process_audio(self, audio):
         try:
-            self.get_logger().info(f'Processing {len(audio.frame_data)} bytes of audio...')
-            text = self.recognizer.recognize_google(audio)
-            msg = String()
-            msg.data = text
-            self.publisher_.publish(msg)
-            self.get_logger().info(f'Recognized: "{text}"')
+            self.get_logger().info(f'Processing audio ({len(audio.frame_data)} bytes)...')
+            text = self.recognizer.recognize_google(audio).lower()
+            self.get_logger().info(f'Heard: "{text}"')
+            
+            # WAKE WORD LOGIC: "LUNA"
+            wake_word = "luna"
+            
+            if wake_word in text:
+                # Find where "luna" starts and take everything after it
+                # This handles "Um, Luna, stop the car" -> " stop the car"
+                # Or "Luna stop" -> " stop"
+                
+                parts = text.split(wake_word, 1)
+                if len(parts) > 1:
+                    command = parts[1].strip()
+                    if command:
+                        self.get_logger().info(f'Wake word detected! Command: "{command}"')
+                        msg = String()
+                        msg.data = command
+                        self.publisher_.publish(msg)
+                    else:
+                        self.get_logger().info('Wake word detected but no command followed.')
+            else:
+                self.get_logger().info(f'Ignored: No wake word "{wake_word}" found.')
+
         except sr.UnknownValueError:
             self.get_logger().warn('Could not understand audio')
         except sr.RequestError as e:
             self.get_logger().error(f'Service error: {e}')
         except Exception as e:
-            self.get_logger().error(f'Unexpected error in recognition: {e}')
+            self.get_logger().error(f'Unexpected error: {e}')
 
 def main(args=None):
     rclpy.init(args=args)

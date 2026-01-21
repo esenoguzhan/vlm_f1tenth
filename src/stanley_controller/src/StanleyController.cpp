@@ -23,9 +23,10 @@ StanleyController::StanleyController() : Node("stanley_controller") {
     wheelbase_ = this->get_parameter("wheelbase").as_double();
 
     // Load CSVs into memory (0: Center, 1: Left, 2: Right)
-    lanes_.push_back(load_waypoints(this->get_parameter("center_csv").as_string()));
-    lanes_.push_back(load_waypoints(this->get_parameter("left_csv").as_string()));
-    lanes_.push_back(load_waypoints(this->get_parameter("right_csv").as_string()));
+    // Load CSVs into memory
+    // User requested RIGHT lane as MAIN (Index 0)
+    lanes_.push_back(load_waypoints(this->get_parameter("right_csv").as_string())); // Index 0: Right (Default/Main)
+    lanes_.push_back(load_waypoints(this->get_parameter("left_csv").as_string()));  // Index 1: Left
 
     // ROS 2 Setup
     odom_sub_ = this->create_subscription<nav_msgs::msg::Odometry>(
