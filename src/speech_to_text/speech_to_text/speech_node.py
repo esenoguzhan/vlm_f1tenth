@@ -5,6 +5,7 @@ import speech_recognition as sr
 import threading
 import socket
 import time
+import traceback
 
 class NetworkMicrophone(sr.AudioSource):
     """Custom AudioSource that reads from a TCP socket"""
@@ -23,15 +24,18 @@ class NetworkMicrophone(sr.AudioSource):
             self.server_socket.bind((self.host, self.port))
             self.server_socket.listen(1)
             print(f"Network Mic listening on {self.host}:{self.port}...")
-            print("Please run 'python stream_mic.py' on your Windows PC now.")
+            print("Server socket bound and listening.")
+            
+            # This blocks until connection
             self.client_socket, addr = self.server_socket.accept()
             print(f"Microphone connected from: {addr}")
         except Exception as e:
-            print(f"Network Mic Bind Error: {e}")
+            print(f"Network Mic Bind/Accept Error: {e}")
             raise e
         return self
 
-    def __exit__(self, exc_type, exc_value, traceback):
+    def __exit__(self, exc_type, exc_value, tb):
+        print("Closing Network Microphone socket...")
         if self.client_socket:
             self.client_socket.close()
         self.server_socket.close()
@@ -49,9 +53,12 @@ class NetworkMicrophone(sr.AudioSource):
                 while len(data) < size:
                     packet = self.client_socket.recv(size - len(data))
                     if not packet:
+                        # socket closed by client
+                        # print("Socket EOF encountered.")
                         return b""  # EOF
                     data += packet
-            except Exception:
+            except Exception as e:
+                print(f"Socket read error: {e}")
                 return b""
         return data
 
@@ -63,33 +70,41 @@ class SpeechToTextNode(Node):
         
         # Start the listening thread
         self.listen_thread = threading.Thread(target=self.start_listening)
+        self.listen_thread.daemon = True # Kill thread if main process dies
         self.listen_thread.start()
         
     def start_listening(self):
         self.get_logger().info('Starting Network Microphone Server...')
         
-        # We wrap the network source in a loop to allow reconnection
         while rclpy.ok():
             try:
+                # Re-create the network mic source for each new connection
                 with NetworkMicrophone(port=9000) as source:
                     self.get_logger().info('Client connected. Listening for speech...')
                     
                     try:
                         while rclpy.ok():
-                            # We manually listen in a loop to handle the stream
                             # This blocks until a phrase is detected
+                            # self.get_logger().info('Waiting for speech input...')
                             audio = self.recognizer.listen(source, phrase_time_limit=10)
+                            if len(audio.frame_data) == 0:
+                                self.get_logger().warn("Empty audio received, client likely disconnected.")
+                                break
+                                
                             self.process_audio(audio)
+                            
                     except Exception as e:
-                        self.get_logger().warn(f"Connection lost or error: {e}")
+                        self.get_logger().warn(f"Processing loop error: {e}")
+                        # traceback.print_exc()
+                        break 
                         
             except Exception as e:
-                self.get_logger().error(f"Server error: {e}")
-                time.sleep(2) # Wait before restart
+                self.get_logger().error(f"Server bind/accept error: {e}")
+                time.sleep(2) # Wait before retry
 
     def process_audio(self, audio):
         try:
-            self.get_logger().info('Processing audio...')
+            self.get_logger().info(f'Processing {len(audio.frame_data)} bytes of audio...')
             text = self.recognizer.recognize_google(audio)
             msg = String()
             msg.data = text
@@ -99,6 +114,8 @@ class SpeechToTextNode(Node):
             self.get_logger().warn('Could not understand audio')
         except sr.RequestError as e:
             self.get_logger().error(f'Service error: {e}')
+        except Exception as e:
+            self.get_logger().error(f'Unexpected error in recognition: {e}')
 
 def main(args=None):
     rclpy.init(args=args)
