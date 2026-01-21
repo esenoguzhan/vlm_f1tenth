@@ -1,6 +1,6 @@
 import rclpy
 from rclpy.node import Node
-from std_msgs.msg import String
+from std_msgs.msg import String, Int32
 from rcl_interfaces.srv import SetParameters
 from rcl_interfaces.msg import Parameter, ParameterType
 
@@ -14,6 +14,9 @@ class DecisionNode(Node):
             self.mode_callback,
             10)
         
+        # Publisher for Lane Changing
+        self.lane_publisher = self.create_publisher(Int32, '/target_lane', 10)
+        
         # Client to set parameters on the controller node
         self.param_client = self.create_client(SetParameters, '/stanley_controller/set_parameters')
         
@@ -24,7 +27,13 @@ class DecisionNode(Node):
         raw_text = msg.data.upper()
         detected_mode = None
 
-        # Prioritize SAFETY check
+        # 1. Lane Change Logic
+        if "LEFT" in raw_text:
+            self.change_lane(1) # 1 is Left
+        elif "RIGHT" in raw_text:
+            self.change_lane(0) # 0 is Right
+
+        # 2. Driving Mode Logic
         if "SAFETY" in raw_text:
             detected_mode = "SAFETY"
         elif "AGGRESSIVE" in raw_text:
@@ -37,8 +46,16 @@ class DecisionNode(Node):
                 self.get_logger().info(f'LLM output "{msg.data}" -> Switching to {detected_mode} mode')
                 self.current_mode = detected_mode
                 self.apply_parameters(detected_mode)
-        else:
+        elif "LEFT" not in raw_text and "RIGHT" not in raw_text:
+             # Only warn if it wasn't a lane change command either
             self.get_logger().warn(f'Ignored invalid mode from LLM: "{msg.data}"')
+
+    def change_lane(self, lane_index):
+        msg = Int32()
+        msg.data = lane_index
+        self.lane_publisher.publish(msg)
+        lane_name = "LEFT" if lane_index == 1 else "RIGHT"
+        self.get_logger().info(f'Lane Change Requested: {lane_name} ({lane_index})')
 
     def apply_parameters(self, mode):
         req = SetParameters.Request()
