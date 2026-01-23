@@ -15,6 +15,9 @@ StanleyController::StanleyController() : Node("stanley_controller") {
     this->declare_parameter("k_h", 1.0);
     this->declare_parameter("v_scale", 0.8);
     this->declare_parameter("wheelbase", 0.33);
+    this->declare_parameter("min_lookahead", 0.5);
+    this->declare_parameter("min_speed", 0.5);
+    this->declare_parameter("max_speed", 2.0);
 
     // Load Initial Parameter Values
     k_e_ = this->get_parameter("k_e").as_double();
@@ -92,9 +95,24 @@ void StanleyController::odom_callback(const nav_msgs::msg::Odometry::SharedPtr m
         if (d < min_d) { min_d = d; idx = i; }
     }
 
-    // 4. Calculate Heading Error
-    size_t next_idx = (idx + 1) % path.size();
-    double path_yaw = std::atan2(path[next_idx].y - path[idx].y, path[next_idx].x - path[idx].x);
+    // 4. Find Lookahead Point (for Heading Error)
+    double current_lookahead = this->get_parameter("min_lookahead").as_double();
+    size_t lookahead_idx = idx;
+    double dist_sum = 0.0;
+    
+    // Scan ahead until we consistently meet the lookahead distance
+    for (size_t i = 0; i < path.size(); ++i) {
+        size_t curr = (idx + i) % path.size();
+        size_t next = (curr + 1) % path.size();
+        dist_sum += std::hypot(path[next].x - path[curr].x, path[next].y - path[curr].y);
+        if (dist_sum >= current_lookahead) {
+            lookahead_idx = next;
+            break;
+        }
+    }
+
+    // 5. Calculate Heading Error (Path vs Car)
+    double path_yaw = std::atan2(path[lookahead_idx].y - path[idx].y, path[lookahead_idx].x - path[idx].x);
     double yaw_err = path_yaw - yaw;
     while (yaw_err > M_PI) yaw_err -= 2.0 * M_PI;
     while (yaw_err < -M_PI) yaw_err += 2.0 * M_PI;
@@ -111,8 +129,13 @@ void StanleyController::odom_callback(const nav_msgs::msg::Odometry::SharedPtr m
     // 7. Output Drive Message
     ackermann_msgs::msg::AckermannDriveStamped drive;
     drive.header.stamp = this->now();
-    drive.drive.speed = path[idx].v * v_scale_;
-    drive.drive.steering_angle = std::clamp(steer, -0.44, 0.44); // ~25 deg limit
+    
+    double min_speed = this->get_parameter("min_speed").as_double();
+    double max_speed = this->get_parameter("max_speed").as_double();
+    double final_speed = path[idx].v * v_scale_;
+    drive.drive.speed = std::clamp(final_speed, min_speed, max_speed);
+    // 25 degrees in radians is approx 0.436
+    drive.drive.steering_angle = std::clamp(steer, -0.436, 0.436);
     drive_pub_->publish(drive);
 
     publish_visuals(path[idx], msg->header.frame_id);
