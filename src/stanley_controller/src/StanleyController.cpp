@@ -37,17 +37,48 @@ StanleyController::StanleyController() : Node("stanley_controller") {
     lane_sub_ = this->create_subscription<std_msgs::msg::Int32>(
         "/target_lane", 10, std::bind(&StanleyController::lane_callback, this, std::placeholders::_1));
     drive_pub_ = this->create_publisher<ackermann_msgs::msg::AckermannDriveStamped>("/drive", 10);
-    marker_pub_ = this->create_publisher<visualization_msgs::msg::Marker>("/target_waypoint_viz", 10);
-    
+    marker_pub_ = this->create_publisher<visualization_msgs::msg::Marker>("/lookahead_waypoint_viz", 10);
+    closest_pub_ = this->create_publisher<visualization_msgs::msg::Marker>("/closest_waypoint_viz", 10);
+    path_line_pub_ = this->create_publisher<visualization_msgs::msg::Marker>("/global_path_viz", 10, rclcpp::QoS(1).transient_local()); 
+
     timer_ = this->create_wall_timer(std::chrono::seconds(1), std::bind(&StanleyController::timer_callback, this));
 }
 
 void StanleyController::timer_callback() {
-    // Dynamically update gains from parameter server
+    // Dynamically update gains
     k_e_ = this->get_parameter("k_e").as_double();
     k_h_ = this->get_parameter("k_h").as_double();
     v_scale_ = this->get_parameter("v_scale").as_double();
+
+    // Publish Global Path Visuals
+    if (path_line_pub_->get_subscription_count() > 0 && !lanes_[current_lane_].empty()) {
+         visualization_msgs::msg::Marker line_strip;
+         line_strip.header.frame_id = "map"; // Assuming global frame is map
+         line_strip.header.stamp = this->now();
+         line_strip.ns = "raceline";
+         line_strip.action = visualization_msgs::msg::Marker::ADD;
+         line_strip.id = 1;
+         line_strip.type = visualization_msgs::msg::Marker::LINE_STRIP;
+         line_strip.scale.x = 0.1;
+         line_strip.color.g = 1.0; line_strip.color.a = 1.0;
+         
+         const auto& path = lanes_[current_lane_];
+         for (const auto& wp : path) {
+             geometry_msgs::msg::Point p;
+             p.x = wp.x; p.y = wp.y; p.z = 0.0;
+             line_strip.points.push_back(p);
+         }
+         // Close loop
+         if (!path.empty()) {
+             geometry_msgs::msg::Point p;
+             p.x = path[0].x; p.y = path[0].y; p.z = 0.0;
+             line_strip.points.push_back(p);
+         }
+         path_line_pub_->publish(line_strip);
+    }
 }
+
+// ... Check if we need to modify lane_callback or load_waypoints - no changes needed there
 
 void StanleyController::lane_callback(const std_msgs::msg::Int32::SharedPtr msg) {
     if (msg->data >= 0 && static_cast<size_t>(msg->data) < lanes_.size()) {
@@ -81,7 +112,7 @@ void StanleyController::odom_callback(const nav_msgs::msg::Odometry::SharedPtr m
     double x = msg->pose.pose.position.x;
     double y = msg->pose.pose.position.y;
     double yaw = tf2::getYaw(msg->pose.pose.orientation);
-    double v = std::max(msg->twist.twist.linear.x, 0.5); // Prevent division by zero
+    double v = std::max(msg->twist.twist.linear.x, 0.5); 
 
     // 2. Project to Front Axle
     double fx = x + wheelbase_ * cos(yaw);
@@ -95,12 +126,10 @@ void StanleyController::odom_callback(const nav_msgs::msg::Odometry::SharedPtr m
         if (d < min_d) { min_d = d; idx = i; }
     }
 
-    // 4. Find Lookahead Point (for Heading Error)
+    // 4. Find Lookahead Point 
     double current_lookahead = this->get_parameter("min_lookahead").as_double();
     size_t lookahead_idx = idx;
     double dist_sum = 0.0;
-    
-    // Scan ahead until we consistently meet the lookahead distance
     for (size_t i = 0; i < path.size(); ++i) {
         size_t curr = (idx + i) % path.size();
         size_t next = (curr + 1) % path.size();
@@ -111,47 +140,53 @@ void StanleyController::odom_callback(const nav_msgs::msg::Odometry::SharedPtr m
         }
     }
 
-    // 5. Calculate Heading Error (Path vs Car)
+    // 5. Calculate Heading Error 
     double path_yaw = std::atan2(path[lookahead_idx].y - path[idx].y, path[lookahead_idx].x - path[idx].x);
     double yaw_err = path_yaw - yaw;
     while (yaw_err > M_PI) yaw_err -= 2.0 * M_PI;
     while (yaw_err < -M_PI) yaw_err += 2.0 * M_PI;
 
-    // 5. Calculate Crosstrack Error (Lateral distance in car frame)
+    // 6. Calculate Crosstrack Error 
     double dx = fx - path[idx].x;
     double dy = fy - path[idx].y;
     double cte = -dx * std::sin(path_yaw) + dy * std::cos(path_yaw);
 
-    // 6. Stanley Control Law
-    // CTE is positive when car is to the left of path. We need to steer RIGHT (negative) to correct.
+    // 7. Stanley Control Law
     double steer = (k_h_ * yaw_err) + std::atan2(k_e_ * -cte, v);
 
-    // 7. Output Drive Message
+    // 8. Output Drive Message
     ackermann_msgs::msg::AckermannDriveStamped drive;
     drive.header.stamp = this->now();
-    
     double min_speed = this->get_parameter("min_speed").as_double();
     double max_speed = this->get_parameter("max_speed").as_double();
     double final_speed = path[idx].v * v_scale_;
     drive.drive.speed = std::clamp(final_speed, min_speed, max_speed);
-    // 25 degrees in radians is approx 0.436
     drive.drive.steering_angle = std::clamp(steer, -0.436, 0.436);
     drive_pub_->publish(drive);
 
-    publish_visuals(path[idx], msg->header.frame_id);
+    publish_visuals(path[lookahead_idx], path[idx], msg->header.frame_id);
 }
 
-void StanleyController::publish_visuals(const Waypoint& target, const std::string& frame_id) {
+void StanleyController::publish_visuals(const Waypoint& lookahead, const Waypoint& closest, const std::string& frame_id) {
+    // Red Sphere for Lookahead
     visualization_msgs::msg::Marker marker;
     marker.header.frame_id = frame_id;
     marker.header.stamp = this->now();
+    marker.id = 100;
     marker.type = visualization_msgs::msg::Marker::SPHERE;
     marker.action = visualization_msgs::msg::Marker::ADD;
-    marker.pose.position.x = target.x;
-    marker.pose.position.y = target.y;
-    marker.scale.x = 0.2; marker.scale.y = 0.2; marker.scale.z = 0.2;
-    marker.color.a = 1.0; marker.color.g = 1.0; // Green
+    marker.pose.position.x = lookahead.x;
+    marker.pose.position.y = lookahead.y;
+    marker.scale.x = 0.3; marker.scale.y = 0.3; marker.scale.z = 0.3;
+    marker.color.a = 1.0; marker.color.r = 1.0; // Red
     marker_pub_->publish(marker);
+
+    // Blue Sphere for Closest
+    marker.id = 101;
+    marker.pose.position.x = closest.x;
+    marker.pose.position.y = closest.y;
+    marker.color.r = 0.0; marker.color.b = 1.0; // Blue
+    closest_pub_->publish(marker);
 }
 
 int main(int argc, char** argv) {

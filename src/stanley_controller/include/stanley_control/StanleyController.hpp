@@ -32,7 +32,10 @@ private:
     rclcpp::Subscription<nav_msgs::msg::Odometry>::SharedPtr odom_sub_;
     rclcpp::Subscription<std_msgs::msg::Int32>::SharedPtr lane_sub_;
     rclcpp::Publisher<ackermann_msgs::msg::AckermannDriveStamped>::SharedPtr drive_pub_;
-    rclcpp::Publisher<visualization_msgs::msg::Marker>::SharedPtr marker_pub_;
+    rclcpp::Publisher<visualization_msgs::msg::Marker>::SharedPtr marker_pub_;       // Target Point (Red)
+    rclcpp::Publisher<visualization_msgs::msg::Marker>::SharedPtr closest_pub_;      // Closest Point (Blue)
+    rclcpp::Publisher<visualization_msgs::msg::Marker>::SharedPtr path_line_pub_;    // Full Path Line
+
     rclcpp::TimerBase::SharedPtr timer_;
 
     // Controller Data
