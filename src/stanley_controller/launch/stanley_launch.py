@@ -24,9 +24,10 @@ def generate_launch_description():
                 'k_e': 1.5,
                 'k_h': 1.0,
                 'v_scale': 0.8,
-                'wheelbase': 0.33
+                'wheelbase': 0.33,
                 # CSV paths are handled automatically by the C++ node defaults using ament_index
                 # unless overridden here.
+                'right_csv': os.path.join(stanley_dir, 'racelines', 'min_curve.csv'),
             }]
         )
     ])
