@@ -29,5 +29,12 @@ def generate_launch_description():
                 # unless overridden here.
                 'right_csv': os.path.join(stanley_dir, 'racelines', 'min_curve.csv'),
             }]
+        ),
+        Node(
+            package='rviz2',
+            executable='rviz2',
+            name='rviz',
+            # Use the config file if it exists, otherwise empty
+            arguments=['-d', os.path.join(stanley_dir, 'launch', 'stanley.rviz')]
         )
     ])
