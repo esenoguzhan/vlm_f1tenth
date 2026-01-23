@@ -39,7 +39,7 @@ StanleyController::StanleyController() : Node("stanley_controller") {
     drive_pub_ = this->create_publisher<ackermann_msgs::msg::AckermannDriveStamped>("/drive", 10);
     marker_pub_ = this->create_publisher<visualization_msgs::msg::Marker>("/lookahead_waypoint_viz", 10);
     closest_pub_ = this->create_publisher<visualization_msgs::msg::Marker>("/closest_waypoint_viz", 10);
-    path_line_pub_ = this->create_publisher<visualization_msgs::msg::Marker>("/global_path_viz", 10, rclcpp::QoS(1).transient_local()); 
+    path_line_pub_ = this->create_publisher<visualization_msgs::msg::Marker>("/global_path_viz", rclcpp::QoS(1).transient_local()); 
 
     timer_ = this->create_wall_timer(std::chrono::seconds(1), std::bind(&StanleyController::timer_callback, this));
 }
