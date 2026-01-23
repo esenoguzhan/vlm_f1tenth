@@ -105,7 +105,8 @@ void StanleyController::odom_callback(const nav_msgs::msg::Odometry::SharedPtr m
     double cte = -dx * std::sin(path_yaw) + dy * std::cos(path_yaw);
 
     // 6. Stanley Control Law
-    double steer = (k_h_ * yaw_err) + std::atan2(k_e_ * cte, v);
+    // CTE is positive when car is to the left of path. We need to steer RIGHT (negative) to correct.
+    double steer = (k_h_ * yaw_err) + std::atan2(k_e_ * -cte, v);
 
     // 7. Output Drive Message
     ackermann_msgs::msg::AckermannDriveStamped drive;
