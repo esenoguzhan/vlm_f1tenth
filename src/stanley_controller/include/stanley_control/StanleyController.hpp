@@ -26,7 +26,7 @@ private:
 
     // Helpers
     std::vector<Waypoint> load_waypoints(const std::string& path);
-    void publish_visuals(const Waypoint& target, const std::string& frame_id);
+    void publish_visuals(const Waypoint& lookahead, const Waypoint& closest, const std::string& frame_id);
 
     // ROS 2 Interfaces
     rclcpp::Subscription<nav_msgs::msg::Odometry>::SharedPtr odom_sub_;
