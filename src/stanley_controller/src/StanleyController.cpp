@@ -16,6 +16,11 @@ StanleyController::StanleyController() : Node("stanley_controller") {
     this->declare_parameter("v_scale", 0.8);
     this->declare_parameter("wheelbase", 0.33);
     this->declare_parameter("min_lookahead", 0.5);
+    this->declare_parameter("max_lookahead", 1.0); // Dynamic Lookahead Max
+    this->declare_parameter("min_lookahead_speed", 1.0);
+    this->declare_parameter("max_lookahead_speed", 4.0);
+    this->declare_parameter("crosstrack_error_offset", 0.0); // Centering Offset
+
     this->declare_parameter("min_speed", 0.5);
     this->declare_parameter("max_speed", 2.0);
 
@@ -126,10 +131,22 @@ void StanleyController::odom_callback(const nav_msgs::msg::Odometry::SharedPtr m
         if (d < min_d) { min_d = d; idx = i; }
     }
 
-    // 4. Find Lookahead Point 
-    double current_lookahead = this->get_parameter("min_lookahead").as_double();
+    // 4. Find Lookahead Point (Dynamic)
+    double min_la = this->get_parameter("min_lookahead").as_double();
+    double max_la = this->get_parameter("max_lookahead").as_double();
+    double min_la_spd = this->get_parameter("min_lookahead_speed").as_double();
+    double max_la_spd = this->get_parameter("max_lookahead_speed").as_double();
+
+    // Clamp speed for interpolation
+    double v_clamped = std::clamp(v, min_la_spd, max_la_spd);
+    // Linear Interpolation: (v-min)/(max-min) ratio
+    double ratio = (v_clamped - min_la_spd) / (max_la_spd - min_la_spd + 1e-6);
+    double current_lookahead = min_la + ratio * (max_la - min_la);
+
     size_t lookahead_idx = idx;
     double dist_sum = 0.0;
+    
+    // Scan ahead until we consistently meet the lookahead distance
     for (size_t i = 0; i < path.size(); ++i) {
         size_t curr = (idx + i) % path.size();
         size_t next = (curr + 1) % path.size();
@@ -140,7 +157,7 @@ void StanleyController::odom_callback(const nav_msgs::msg::Odometry::SharedPtr m
         }
     }
 
-    // 5. Calculate Heading Error 
+    // 5. Calculate Heading Error (Path vs Car)
     double path_yaw = std::atan2(path[lookahead_idx].y - path[idx].y, path[lookahead_idx].x - path[idx].x);
     double yaw_err = path_yaw - yaw;
     while (yaw_err > M_PI) yaw_err -= 2.0 * M_PI;
@@ -149,7 +166,16 @@ void StanleyController::odom_callback(const nav_msgs::msg::Odometry::SharedPtr m
     // 6. Calculate Crosstrack Error 
     double dx = fx - path[idx].x;
     double dy = fy - path[idx].y;
-    double cte = -dx * std::sin(path_yaw) + dy * std::cos(path_yaw);
+    // CTE is positive when car is to the left of path
+    double raw_cte = -dx * std::sin(path_yaw) + dy * std::cos(path_yaw);
+    
+    // Apply Offset (centered at 0, + adds to error)
+    // If we want to be further Left, we want error to be "lower" (more negative), so steer Right?
+    // Wait. If car is at 0, and we want to be at +0.5 (Left).
+    // Current CTE = 0. We want controller to think CTE = -0.5 (Too Right) so it steers Left.
+    // So Effective CTE = Raw CTE - Desired Offset.
+    double cte_offset = this->get_parameter("crosstrack_error_offset").as_double();
+    double cte = raw_cte - cte_offset;
 
     // 7. Stanley Control Law
     double steer = (k_h_ * yaw_err) + std::atan2(k_e_ * -cte, v);
