@@ -1,4 +1,5 @@
 import rclpy
+import json
 from rclpy.node import Node
 from std_msgs.msg import String, Int32
 from rcl_interfaces.srv import SetParameters
@@ -10,7 +11,7 @@ class DecisionNode(Node):
         # Subscribe to LLM output
         self.subscription = self.create_subscription(
             String,
-            'output',
+            'llm_vel',
             self.mode_callback,
             10)
         
@@ -24,31 +25,38 @@ class DecisionNode(Node):
         self.get_logger().info('Decision Node started. Waiting for driving mode from LLM...')
 
     def mode_callback(self, msg):
-        raw_text = msg.data.upper()
+        try:
+            data = json.loads(msg.data)
+            raw_text = data.get("action", "").upper()
+            self.get_logger().info(f"Received JSON action: {raw_text} (Reason: {data.get('reason', 'N/A')})")
+        except json.JSONDecodeError:
+            self.get_logger().warn("Received non-JSON input, falling back to raw string")
+            raw_text = msg.data.upper()
+
         detected_mode = None
 
         # 1. Lane Change Logic
-        if "LEFT" in raw_text:
+        if "GO_LEFT" in raw_text:
             self.change_lane(1) # 1 is Left
-        elif "RIGHT" in raw_text:
+        elif "GO_RIGHT" in raw_text:
             self.change_lane(0) # 0 is Right
 
         # 2. Driving Mode Logic
-        if "SAFETY" in raw_text:
+        if "DECELERATE" in raw_text:
             detected_mode = "SAFETY"
-        elif "AGGRESSIVE" in raw_text:
+        elif "ACCELERATE" in raw_text:
             detected_mode = "AGGRESSIVE"
         elif "NORMAL" in raw_text:
             detected_mode = "NORMAL"
 
         if detected_mode:
             if detected_mode != self.current_mode:
-                self.get_logger().info(f'LLM output "{msg.data}" -> Switching to {detected_mode} mode')
+                self.get_logger().info(f'LLM output "{raw_text}" -> Switching to {detected_mode} mode')
                 self.current_mode = detected_mode
                 self.apply_parameters(detected_mode)
-        elif "LEFT" not in raw_text and "RIGHT" not in raw_text:
+        elif "GO_LEFT" not in raw_text and "GO_RIGHT" not in raw_text:
              # Only warn if it wasn't a lane change command either
-            self.get_logger().warn(f'Ignored invalid mode from LLM: "{msg.data}"')
+            self.get_logger().warn(f'Ignored invalid mode from LLM: "{raw_text}"')
 
     def change_lane(self, lane_index):
         msg = Int32()
@@ -64,22 +72,22 @@ class DecisionNode(Node):
         if mode == "SAFETY":
             # Slow down, lower gains for stability
             req.parameters = [
-                Parameter(name='v_scale', value=ParameterType(type=ParameterType.PARAMETER_DOUBLE, double_value=0.5)),
-                Parameter(name='k_e', value=ParameterType(type=ParameterType.PARAMETER_DOUBLE, double_value=0.5)),
-                 Parameter(name='k_h', value=ParameterType(type=ParameterType.PARAMETER_DOUBLE, double_value=0.8))
+                Parameter(name='v_scale', value=ParameterType(type=ParameterType.PARAMETER_DOUBLE, double_value=0.2)),
+                Parameter(name='k_e', value=ParameterType(type=ParameterType.PARAMETER_DOUBLE, double_value=1.0)),
+                 Parameter(name='k_h', value=ParameterType(type=ParameterType.PARAMETER_DOUBLE, double_value=0.5))
             ]
         elif mode == "AGGRESSIVE":
             # Speed up, higher gains for responsiveness
             req.parameters = [
-                Parameter(name='v_scale', value=ParameterType(type=ParameterType.PARAMETER_DOUBLE, double_value=1.5)),
-                Parameter(name='k_e', value=ParameterType(type=ParameterType.PARAMETER_DOUBLE, double_value=2.0)),
-                 Parameter(name='k_h', value=ParameterType(type=ParameterType.PARAMETER_DOUBLE, double_value=1.2))
+                Parameter(name='v_scale', value=ParameterType(type=ParameterType.PARAMETER_DOUBLE, double_value=1.0)),
+                Parameter(name='k_e', value=ParameterType(type=ParameterType.PARAMETER_DOUBLE, double_value=1.0)),
+                 Parameter(name='k_h', value=ParameterType(type=ParameterType.PARAMETER_DOUBLE, double_value=0.5))
             ]
         else: # NORMAL
              req.parameters = [
-                Parameter(name='v_scale', value=ParameterType(type=ParameterType.PARAMETER_DOUBLE, double_value=0.8)),
-                Parameter(name='k_e', value=ParameterType(type=ParameterType.PARAMETER_DOUBLE, double_value=1.5)),
-                 Parameter(name='k_h', value=ParameterType(type=ParameterType.PARAMETER_DOUBLE, double_value=1.0))
+                Parameter(name='v_scale', value=ParameterType(type=ParameterType.PARAMETER_DOUBLE, double_value=0.5)),
+                Parameter(name='k_e', value=ParameterType(type=ParameterType.PARAMETER_DOUBLE, double_value=1.0)),
+                 Parameter(name='k_h', value=ParameterType(type=ParameterType.PARAMETER_DOUBLE, double_value=0.5))
             ]
 
         # Call the service asynchronously
