@@ -104,7 +104,11 @@ std::vector<Waypoint> StanleyController::load_waypoints(const std::string& path)
         std::string val;
         std::vector<double> row;
         while (std::getline(ss, val, ',')) row.push_back(std::stod(val));
-        if (row.size() >= 3) wps.push_back({row[0], row[1], row[2]});
+        if (row.size() >= 3) {
+            wps.push_back({row[0], row[1], row[2]});
+        } else if (row.size() == 2) {
+            wps.push_back({row[0], row[1], -1.0}); // Sentinel for no velocity profile
+        }
     }
     return wps;
 }
@@ -137,11 +141,18 @@ void StanleyController::odom_callback(const nav_msgs::msg::Odometry::SharedPtr m
     double min_la_spd = this->get_parameter("min_lookahead_speed").as_double();
     double max_la_spd = this->get_parameter("max_lookahead_speed").as_double();
 
-    // Clamp speed for interpolation
-    double v_clamped = std::clamp(v, min_la_spd, max_la_spd);
-    // Linear Interpolation: (v-min)/(max-min) ratio
-    double ratio = (v_clamped - min_la_spd) / (max_la_spd - min_la_spd + 1e-6);
-    double current_lookahead = min_la + ratio * (max_la - min_la);
+    double current_lookahead;
+    // Check if the waypoint has a valid velocity profile
+    if (path[idx].v < 0.0) {
+        // No velocity profile, use min lookahead
+        current_lookahead = min_la;
+    } else {
+        // Clamp speed for interpolation
+        double v_clamped = std::clamp(v, min_la_spd, max_la_spd);
+        // Linear Interpolation: (v-min)/(max-min) ratio
+        double ratio = (v_clamped - min_la_spd) / (max_la_spd - min_la_spd + 1e-6);
+        current_lookahead = min_la + ratio * (max_la - min_la);
+    }
 
     size_t lookahead_idx = idx;
     double dist_sum = 0.0;
