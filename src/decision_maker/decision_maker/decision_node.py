@@ -3,7 +3,7 @@ import json
 from rclpy.node import Node
 from std_msgs.msg import String, Int32
 from rcl_interfaces.srv import SetParameters
-from rcl_interfaces.msg import Parameter, ParameterType
+from rcl_interfaces.msg import Parameter, ParameterType, ParameterValue
 
 class DecisionNode(Node):
     def __init__(self):
@@ -72,22 +72,22 @@ class DecisionNode(Node):
         if mode == "SAFETY":
             # Slow down, lower gains for stability
             req.parameters = [
-                Parameter(name='v_scale', value=ParameterType(type=ParameterType.PARAMETER_DOUBLE, double_value=0.2)),
-                Parameter(name='k_e', value=ParameterType(type=ParameterType.PARAMETER_DOUBLE, double_value=1.0)),
-                 Parameter(name='k_h', value=ParameterType(type=ParameterType.PARAMETER_DOUBLE, double_value=0.5))
+                Parameter(name='v_scale', value=ParameterValue(type=ParameterType.PARAMETER_DOUBLE, double_value=0.2)),
+                Parameter(name='k_e', value=ParameterValue(type=ParameterType.PARAMETER_DOUBLE, double_value=1.0)),
+                 Parameter(name='k_h', value=ParameterValue(type=ParameterType.PARAMETER_DOUBLE, double_value=0.5))
             ]
         elif mode == "AGGRESSIVE":
             # Speed up, higher gains for responsiveness
             req.parameters = [
-                Parameter(name='v_scale', value=ParameterType(type=ParameterType.PARAMETER_DOUBLE, double_value=1.0)),
-                Parameter(name='k_e', value=ParameterType(type=ParameterType.PARAMETER_DOUBLE, double_value=1.0)),
-                 Parameter(name='k_h', value=ParameterType(type=ParameterType.PARAMETER_DOUBLE, double_value=0.5))
+                Parameter(name='v_scale', value=ParameterValue(type=ParameterType.PARAMETER_DOUBLE, double_value=1.0)),
+                Parameter(name='k_e', value=ParameterValue(type=ParameterType.PARAMETER_DOUBLE, double_value=1.0)),
+                 Parameter(name='k_h', value=ParameterValue(type=ParameterType.PARAMETER_DOUBLE, double_value=0.5))
             ]
         else: # NORMAL
              req.parameters = [
-                Parameter(name='v_scale', value=ParameterType(type=ParameterType.PARAMETER_DOUBLE, double_value=0.5)),
-                Parameter(name='k_e', value=ParameterType(type=ParameterType.PARAMETER_DOUBLE, double_value=1.0)),
-                 Parameter(name='k_h', value=ParameterType(type=ParameterType.PARAMETER_DOUBLE, double_value=0.5))
+                Parameter(name='v_scale', value=ParameterValue(type=ParameterType.PARAMETER_DOUBLE, double_value=0.5)),
+                Parameter(name='k_e', value=ParameterValue(type=ParameterType.PARAMETER_DOUBLE, double_value=1.0)),
+                 Parameter(name='k_h', value=ParameterValue(type=ParameterType.PARAMETER_DOUBLE, double_value=0.5))
             ]
 
         # Call the service asynchronously
