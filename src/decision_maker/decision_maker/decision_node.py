@@ -79,13 +79,25 @@ class DecisionNode(Node):
                 # Car is in front, switch lane to overtake
                 new_lane = 1 - self.current_lane_index
                 self.change_lane(new_lane)
-                
-                # Switch to AGGRESSIVE mode for overtaking
                 if self.current_mode != "AGGRESSIVE":
-                    self.get_logger().info('VLM overtaking -> Switching to AGGRESSIVE mode')
+                    self.get_logger().info('VLM decision "center" -> Switching to AGGRESSIVE')
                     self.current_mode = "AGGRESSIVE"
-                    self.apply_parameters("AGGRESSIVE") 
-            # If decision is "stay", "left", or "right", continue in current lane (do nothing)
+                    self.apply_parameters("AGGRESSIVE")
+
+            elif decision == "left" or decision == "right":
+                # Car is on side, keep lane but be AGGRESSIVE
+                if self.current_mode != "AGGRESSIVE":
+                    self.get_logger().info(f'VLM decision "{decision}" -> Switching to AGGRESSIVE')
+                    self.current_mode = "AGGRESSIVE"
+                    self.apply_parameters("AGGRESSIVE")
+
+            elif decision == "stay":
+                # No car, stay NORMAL
+                if self.current_mode != "NORMAL":
+                     self.get_logger().info('VLM decision "stay" -> Switching to NORMAL')
+                     self.current_mode = "NORMAL"
+                     self.apply_parameters("NORMAL")
+
             
         except json.JSONDecodeError:
             self.get_logger().error(f"Failed to decode VLM JSON: {msg.data}")
