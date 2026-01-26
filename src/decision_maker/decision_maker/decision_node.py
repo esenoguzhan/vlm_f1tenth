@@ -76,7 +76,13 @@ class DecisionNode(Node):
             
             if decision == "center":
                 # Car is in front, go left to overtake
-                self.change_lane(1) 
+                self.change_lane(1)
+                
+                # Switch to AGGRESSIVE mode for overtaking
+                if self.current_mode != "AGGRESSIVE":
+                    self.get_logger().info('VLM overtaking -> Switching to AGGRESSIVE mode')
+                    self.current_mode = "AGGRESSIVE"
+                    self.apply_parameters("AGGRESSIVE") 
             # If decision is "stay", "left", or "right", continue in current lane (do nothing)
             
         except json.JSONDecodeError:
