@@ -80,11 +80,12 @@ class DecisionNode(Node):
             if decision == "center":
                 # Car is in front, switch lane to overtake
                 # only initiate overtake if not already active to avoid oscillation
-                if not self.overtaking_active: 
-                    self.overtaking_active = True
-                    self.lane_before_overtake = self.current_lane_index
-                    new_lane = 1 - self.current_lane_index
-                    self.change_lane(new_lane)
+                 
+                self.overtaking_active = True
+                self.lane_before_overtake = self.current_lane_index
+                new_lane = 1 - self.current_lane_index
+                self.change_lane(new_lane)
+                self.get_logger().info(f'VLM decision "center" -> Switching to lane {new_lane}')
                 
                 if self.current_mode != "AGGRESSIVE":
                     self.get_logger().info('VLM decision "center" -> Switching to AGGRESSIVE')
