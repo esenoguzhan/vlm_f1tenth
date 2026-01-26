@@ -22,6 +22,7 @@ class DecisionNode(Node):
         self.param_client = self.create_client(SetParameters, '/stanley_controller/set_parameters')
         
         self.current_mode = "NORMAL"
+        self.current_lane_index = 0 # 0: Right, 1: Left. Assumes starting on Right.
         self.get_logger().info('Decision Node started. Waiting for driving mode from LLM...')
 
         # Subscribe to VLM output for overtaking
@@ -75,8 +76,9 @@ class DecisionNode(Node):
             self.get_logger().info(f"Received VLM decision: {decision}")
             
             if decision == "center":
-                # Car is in front, go left to overtake
-                self.change_lane(1)
+                # Car is in front, switch lane to overtake
+                new_lane = 1 - self.current_lane_index
+                self.change_lane(new_lane)
                 
                 # Switch to AGGRESSIVE mode for overtaking
                 if self.current_mode != "AGGRESSIVE":
@@ -92,6 +94,7 @@ class DecisionNode(Node):
         msg = Int32()
         msg.data = lane_index
         self.lane_publisher.publish(msg)
+        self.current_lane_index = lane_index
         lane_name = "LEFT" if lane_index == 1 else "RIGHT"
         self.get_logger().info(f'Lane Change Requested: {lane_name} ({lane_index})')
 
