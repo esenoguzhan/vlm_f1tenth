@@ -24,6 +24,13 @@ class DecisionNode(Node):
         self.current_mode = "NORMAL"
         self.get_logger().info('Decision Node started. Waiting for driving mode from LLM...')
 
+        # Subscribe to VLM output for overtaking
+        self.vlm_subscription = self.create_subscription(
+            String,
+            '/vlm_overtake',
+            self.vlm_callback,
+            10)
+
     def mode_callback(self, msg):
         try:
             data = json.loads(msg.data)
@@ -57,6 +64,23 @@ class DecisionNode(Node):
         elif "GO_LEFT" not in raw_text and "GO_RIGHT" not in raw_text:
              # Only warn if it wasn't a lane change command either
             self.get_logger().warn(f'Ignored invalid mode from LLM: "{raw_text}"')
+
+    def vlm_callback(self, msg):
+        try:
+            data = json.loads(msg.data)
+            if not data.get("success", False):
+                return
+            
+            decision = data.get("decision", "").lower()
+            self.get_logger().info(f"Received VLM decision: {decision}")
+            
+            if decision == "center":
+                # Car is in front, go left to overtake
+                self.change_lane(1) 
+            # If decision is "stay", "left", or "right", continue in current lane (do nothing)
+            
+        except json.JSONDecodeError:
+            self.get_logger().error(f"Failed to decode VLM JSON: {msg.data}")
 
     def change_lane(self, lane_index):
         msg = Int32()
