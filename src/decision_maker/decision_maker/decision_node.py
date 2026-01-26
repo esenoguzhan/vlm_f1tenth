@@ -23,6 +23,8 @@ class DecisionNode(Node):
         
         self.current_mode = "NORMAL"
         self.current_lane_index = 0 # 0: Right, 1: Left. Assumes starting on Right.
+        self.overtaking_active = False
+        self.lane_before_overtake = 0
         self.get_logger().info('Decision Node started. Waiting for driving mode from LLM...')
 
         # Subscribe to VLM output for overtaking
@@ -50,7 +52,7 @@ class DecisionNode(Node):
             self.change_lane(0) # 0 is Right
 
         # 2. Driving Mode Logic
-        if "DECELERATE" or "STOP" in raw_text:
+        if "DECELERATE" in raw_text or "STOP" in raw_text:
             detected_mode = "SAFETY"
         elif "ACCELERATE" in raw_text:
             detected_mode = "AGGRESSIVE"
@@ -77,8 +79,13 @@ class DecisionNode(Node):
             
             if decision == "center":
                 # Car is in front, switch lane to overtake
-                new_lane = 1 - self.current_lane_index
-                self.change_lane(new_lane)
+                # only initiate overtake if not already active to avoid oscillation
+                if not self.overtaking_active: 
+                    self.overtaking_active = True
+                    self.lane_before_overtake = self.current_lane_index
+                    new_lane = 1 - self.current_lane_index
+                    self.change_lane(new_lane)
+                
                 if self.current_mode != "AGGRESSIVE":
                     self.get_logger().info('VLM decision "center" -> Switching to AGGRESSIVE')
                     self.current_mode = "AGGRESSIVE"
@@ -92,7 +99,14 @@ class DecisionNode(Node):
                     self.apply_parameters("AGGRESSIVE")
 
             elif decision == "stay":
-                # No car, stay NORMAL
+                # No car
+                # If we were overtaking, returning to original lane
+                if self.overtaking_active:
+                    self.get_logger().info('Overtake complete -> Returning to previous lane')
+                    self.change_lane(self.lane_before_overtake)
+                    self.overtaking_active = False
+
+                # stay NORMAL
                 if self.current_mode != "NORMAL":
                      self.get_logger().info('VLM decision "stay" -> Switching to NORMAL')
                      self.current_mode = "NORMAL"

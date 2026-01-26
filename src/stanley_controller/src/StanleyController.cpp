@@ -24,7 +24,7 @@ StanleyController::StanleyController() : Node("stanley_controller") {
     this->declare_parameter("right_lane_offset", 0.0); // Offset when on right lane
 
     this->declare_parameter("min_speed", 0.5);
-    this->declare_parameter("max_speed", 2.0);
+    this->declare_parameter("max_speed", 4.0);
 
     // Load Initial Parameter Values
     k_e_ = this->get_parameter("k_e").as_double();
