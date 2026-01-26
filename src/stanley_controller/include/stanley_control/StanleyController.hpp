@@ -44,6 +44,7 @@ private:
     
     // Stanley Parameters
     double k_e_, k_h_, v_scale_, wheelbase_;
+    double crosstrack_error_offset_, left_lane_offset_, right_lane_offset_;
 };
 
 #endif

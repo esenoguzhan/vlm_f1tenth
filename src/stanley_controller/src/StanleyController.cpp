@@ -20,6 +20,8 @@ StanleyController::StanleyController() : Node("stanley_controller") {
     this->declare_parameter("min_lookahead_speed", 1.0);
     this->declare_parameter("max_lookahead_speed", 4.0);
     this->declare_parameter("crosstrack_error_offset", 0.0); // Centering Offset
+    this->declare_parameter("left_lane_offset", -0.2); // Offset when on left lane (negative = push right/outward)
+    this->declare_parameter("right_lane_offset", 0.0); // Offset when on right lane
 
     this->declare_parameter("min_speed", 0.5);
     this->declare_parameter("max_speed", 2.0);
@@ -29,6 +31,9 @@ StanleyController::StanleyController() : Node("stanley_controller") {
     k_h_ = this->get_parameter("k_h").as_double();
     v_scale_ = this->get_parameter("v_scale").as_double();
     wheelbase_ = this->get_parameter("wheelbase").as_double();
+    crosstrack_error_offset_ = this->get_parameter("crosstrack_error_offset").as_double();
+    left_lane_offset_ = this->get_parameter("left_lane_offset").as_double();
+    right_lane_offset_ = this->get_parameter("right_lane_offset").as_double();
 
     // Load CSVs into memory (0: Center, 1: Left, 2: Right)
     // Load CSVs into memory
@@ -54,6 +59,9 @@ void StanleyController::timer_callback() {
     k_e_ = this->get_parameter("k_e").as_double();
     k_h_ = this->get_parameter("k_h").as_double();
     v_scale_ = this->get_parameter("v_scale").as_double();
+    crosstrack_error_offset_ = this->get_parameter("crosstrack_error_offset").as_double();
+    left_lane_offset_ = this->get_parameter("left_lane_offset").as_double();
+    right_lane_offset_ = this->get_parameter("right_lane_offset").as_double();
 
     // Publish Global Path Visuals
     if (path_line_pub_->get_subscription_count() > 0 && !lanes_[current_lane_].empty()) {
@@ -185,7 +193,13 @@ void StanleyController::odom_callback(const nav_msgs::msg::Odometry::SharedPtr m
     // Wait. If car is at 0, and we want to be at +0.5 (Left).
     // Current CTE = 0. We want controller to think CTE = -0.5 (Too Right) so it steers Left.
     // So Effective CTE = Raw CTE - Desired Offset.
-    double cte_offset = this->get_parameter("crosstrack_error_offset").as_double();
+    // Apply Offset (add lane-specific offset)
+    double cte_offset = crosstrack_error_offset_;
+    if (current_lane_ == 0) {  // Right lane
+        cte_offset += right_lane_offset_;
+    } else if (current_lane_ == 1) {  // Left lane
+        cte_offset += left_lane_offset_;
+    }
     double cte = raw_cte - cte_offset;
 
     // 7. Stanley Control Law

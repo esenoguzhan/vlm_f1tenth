@@ -50,7 +50,7 @@ class DecisionNode(Node):
             self.change_lane(0) # 0 is Right
 
         # 2. Driving Mode Logic
-        if "DECELERATE" in raw_text:
+        if "DECELERATE" or "STOP" in raw_text:
             detected_mode = "SAFETY"
         elif "ACCELERATE" in raw_text:
             detected_mode = "AGGRESSIVE"
