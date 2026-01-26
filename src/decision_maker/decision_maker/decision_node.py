@@ -15,6 +15,9 @@ class DecisionNode(Node):
             self.mode_callback,
             10)
         
+        # Declare Parameter for stay threshold
+        self.declare_parameter('stay_threshold', 3)
+        
         # Publisher for Lane Changing
         self.lane_publisher = self.create_publisher(Int32, '/target_lane', 10)
         
@@ -25,6 +28,7 @@ class DecisionNode(Node):
         self.current_lane_index = 0 # 0: Right, 1: Left. Assumes starting on Right.
         self.overtaking_active = False
         self.lane_before_overtake = 0
+        self.stay_counter = 0
         self.get_logger().info('Decision Node started. Waiting for driving mode from LLM...')
 
         # Subscribe to VLM output for overtaking
@@ -77,6 +81,12 @@ class DecisionNode(Node):
             decision = data.get("decision", "").lower()
             self.get_logger().info(f"Received VLM decision: {decision}")
             
+            if decision == "stay":
+                self.stay_counter += 1
+                self.get_logger().info(f"Stay counter: {self.stay_counter}")
+            else:
+                self.stay_counter = 0
+
             if decision == "center":
                 # Car is in front, switch lane to overtake
                 # only initiate overtake if not already active to avoid oscillation
@@ -99,7 +109,7 @@ class DecisionNode(Node):
                     self.current_mode = "AGGRESSIVE"
                     self.apply_parameters("AGGRESSIVE")
 
-            elif decision == "stay":
+            elif decision == "stay" and self.stay_counter >= self.get_parameter('stay_threshold').value:
                 # No car
                 # If we were overtaking, returning to original lane
                 if self.overtaking_active:
