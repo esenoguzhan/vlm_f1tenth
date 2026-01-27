@@ -21,13 +21,14 @@ def generate_launch_description():
             name='stanley_controller',
             output='screen',
             parameters=[{
-                'k_e': 1.5,
-                'k_h': 1.0,
-                'v_scale': 0.8,
+                'k_e': 1.0,
+                'k_h': 0.5,
+                'v_scale': 0.3,
                 'wheelbase': 0.33,
                 # CSV paths are handled automatically by the C++ node defaults using ament_index
                 # unless overridden here.
-                'right_csv': os.path.join(stanley_dir, 'racelines', 'min_curve.csv'),
+                'right_csv': os.path.join(stanley_dir, 'racelines', 'right.csv'),
+                'left_csv': os.path.join(stanley_dir, 'racelines', 'left_last_15.csv'),
             }]
         ),
         Node(
