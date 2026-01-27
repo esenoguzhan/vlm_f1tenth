@@ -1,0 +1,192 @@
+# SPDX-FileCopyrightText: Copyright (c) <year> NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+# SPDX-License-Identifier: Apache-2.0
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+# http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+import rclpy
+from rclpy.node import Node
+from rclpy.executors import MultiThreadedExecutor
+from std_msgs.msg import String
+from sensor_msgs.msg import Image
+import cv2
+from cv_bridge import CvBridge
+from PIL import Image as im
+from nano_llm import NanoLLM, ChatHistory
+import numpy as np
+import threading
+ 
+
+class Nano_LLM_Subscriber(Node):
+
+    def __init__(self):
+        super().__init__('nano_llm_subscriber')
+        
+        #EDIT MODEL HERE
+        self.declare_parameter('model', "Efficient-Large-Model/VILA1.5-3b")
+        self.declare_parameter('api', "mlc")
+        self.declare_parameter('quantization', "q4f16_ft")
+        self.declare_parameter('max_context_len', "1024")
+        self.declare_parameter('image_size', 224)      # Smaller = faster
+        self.declare_parameter('frame_skip', 3)        # Process every Nth frame
+
+        # Frame counter for skipping
+        self.frame_count = 0
+        self.last_decision = 'NO_CAR'
+
+        # Threading control
+        self.is_processing = False
+        self.processing_lock = threading.Lock()
+      
+        # Subscriber for input query
+        self.query_subscription = self.create_subscription(
+            String,
+            'input_query',
+            self.query_listener_callback,
+            10)
+        self.query_subscription  # prevent unused variable warning
+
+        # Subscriber for input image
+        self.image_subscription = self.create_subscription(
+            Image,
+            '/zed/zed_node/rgb/image_rect_color',
+            self.image_listener_callback,
+            10)
+        self.image_subscription  # prevent unused variable warning
+
+        # To convert ROS image message to OpenCV image
+        self.cv_br = CvBridge() 
+      
+        #load the model 
+        self.model = NanoLLM.from_pretrained(
+        model = "Efficient-Large-Model/VILA1.5-3b", 
+        max_context_len = 1024
+        )
+
+        #chatHistory var 
+        self.chat_history = ChatHistory(self.model)
+
+        ##  PUBLISHER
+        self.output_publisher = self.create_publisher(String, 'output', 10)
+        self.query = "Is there a car in front? Answer with: NO, LEFT, CENTER, or RIGHT."
+
+        # Timer-based publishing at fixed rate (20 Hz)
+        self.declare_parameter('publish_rate', 20.0)
+        pub_rate = self.get_parameter('publish_rate').value
+        self.publish_timer = self.create_timer(1.0 / pub_rate, self.publish_decision)
+
+    def query_listener_callback(self, msg):
+        #can change with user needs
+        self.query = msg.data
+
+    def publish_decision(self):
+        """Timer callback - publish last decision at fixed rate"""
+        output_msg = String()
+        output_msg.data = self.last_decision
+        self.output_publisher.publish(output_msg)
+
+
+    def image_listener_callback(self, data):
+        # Frame skipping - only process every Nth frame
+        self.frame_count += 1
+        frame_skip = self.get_parameter('frame_skip').value
+        if self.frame_count % frame_skip != 0:
+            return  # Timer handles publishing
+
+        # Skip if already processing
+        if self.is_processing:
+            return
+
+        # Run inference in background thread
+        threading.Thread(target=self.run_inference, args=(data,)).start()
+
+    def run_inference(self, data):
+        with self.processing_lock:
+            self.is_processing = True
+            try:
+                prompt = self.query
+
+                # Convert ROS image to PIL with resize for speed
+                cv_img = self.cv_br.imgmsg_to_cv2(data, 'rgb8')
+                img_size = self.get_parameter('image_size').value
+                cv_img = cv2.resize(cv_img, (img_size, img_size))
+                PIL_img = im.fromarray(cv_img)
+
+                # Build chat history with image and prompt
+                self.chat_history.append('user', image=PIL_img)
+                self.chat_history.append('user', prompt)
+                embedding, _ = self.chat_history.embed_chat()
+
+                output = self.model.generate(
+                    inputs=embedding,
+                    kv_cache=self.chat_history.kv_cache,
+                    max_new_tokens=5,
+                    min_new_tokens=1,
+                    streaming=False,
+                    do_sample=False,
+                    temperature=0.7,
+                    top_p=0.95
+                )
+
+                # Clean output: remove special tokens
+                raw_output = str(output).replace('</s>', '').replace('<s>', '').strip().upper()
+
+                # Check for car position FIRST (LEFT/CENTER/RIGHT), then check for NO
+                # This prevents "No, LEFT" from matching NO first
+                clean_output = 'NO_CAR'  # Default fallback
+
+                if 'LEFT' in raw_output:
+                    clean_output = 'CAR_LEFT'
+                elif 'CENTER' in raw_output or 'MIDDLE' in raw_output:
+                    clean_output = 'CAR_CENTER'
+                elif 'RIGHT' in raw_output:
+                    clean_output = 'CAR_RIGHT'
+                elif 'YES' in raw_output:
+                    clean_output = 'CAR_CENTER'  # Yes but no position = assume center
+                # else stays NO_CAR
+
+                # Show raw output for debugging
+                self.get_logger().info(f"Raw: '{raw_output}' -> Parsed: {clean_output}")
+
+                # Save decision (timer handles publishing)
+                self.last_decision = clean_output
+                self.get_logger().info(f"VLM Decision: {clean_output}")
+
+                self.chat_history.reset()
+            except Exception as e:
+                self.get_logger().error(f"Inference error: {e}")
+            finally:
+                self.is_processing = False
+
+
+
+def main(args=None):
+    rclpy.init(args=args)
+
+    nano_llm_subscriber = Nano_LLM_Subscriber()
+
+    # Use MultiThreadedExecutor so timer runs while inference is happening
+    executor = MultiThreadedExecutor(num_threads=4)
+    executor.add_node(nano_llm_subscriber)
+
+    try:
+        executor.spin()
+    except KeyboardInterrupt:
+        pass
+    finally:
+        nano_llm_subscriber.destroy_node()
+        rclpy.shutdown()
+
+
+if __name__ == '__main__':
+    main()
+
