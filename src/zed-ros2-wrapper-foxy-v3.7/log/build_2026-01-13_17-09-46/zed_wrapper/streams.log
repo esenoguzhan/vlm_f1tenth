@@ -1,0 +1,110 @@
+[0.108s] Invoking command in '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/build/zed_wrapper': AMENT_PREFIX_PATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components:/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components:/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces:/opt/ros/foxy LD_LIBRARY_PATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/lib:/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.4/lib64:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib PYTHONPATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/usr/lib/python3.8/site-packages/range_libc-0.1-py3.8-linux-aarch64.egg /usr/bin/cmake /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/zed_wrapper -DCMAKE_INSTALL_PREFIX=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper
+[0.264s] -- The C compiler identification is GNU 9.4.0
+[0.367s] -- The CXX compiler identification is GNU 9.4.0
+[0.379s] -- Check for working C compiler: /usr/bin/cc
+[0.521s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.523s] -- Detecting C compiler ABI info
+[0.665s] -- Detecting C compiler ABI info - done
+[0.684s] -- Detecting C compile features
+[0.685s] -- Detecting C compile features - done
+[0.690s] -- Check for working CXX compiler: /usr/bin/c++
+[0.845s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.846s] -- Detecting CXX compiler ABI info
+[1.002s] -- Detecting CXX compiler ABI info - done
+[1.020s] -- Detecting CXX compile features
+[1.021s] -- Detecting CXX compile features - done
+[1.031s] -- Looking for sgemm_
+[1.174s] -- Looking for sgemm_ - not found
+[1.176s] -- Looking for pthread.h
+[1.331s] -- Looking for pthread.h - found
+[1.332s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.479s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[1.479s] -- Looking for pthread_create in pthreads
+[1.603s] -- Looking for pthread_create in pthreads - not found
+[1.604s] -- Looking for pthread_create in pthread
+[1.744s] -- Looking for pthread_create in pthread - found
+[1.745s] -- Found Threads: TRUE  
+[1.790s] -- Looking for sgemm_
+[1.982s] -- Looking for sgemm_ - found
+[1.982s] -- Found BLAS: /usr/lib/aarch64-linux-gnu/libopenblas.so  
+[2.017s] -- Found CUDA: /usr/local/cuda-11.4 (found suitable version "11.4", minimum required is "11.4") 
+[2.060s] -- Found CUDA: /usr/local/cuda-11.4 (found version "11.4") 
+[2.064s] -- Found ament_cmake_auto: 0.9.12 (/opt/ros/foxy/share/ament_cmake_auto/cmake)
+[2.130s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[2.130s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[2.935s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.951s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[3.150s] -- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[3.202s] -- Found FastRTPS: /opt/ros/foxy/include  
+[3.366s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[3.482s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[3.485s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[4.816s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/foxy/share/eigen3_cmake_module/cmake)
+[4.823s] -- Found Eigen3: TRUE (found version "3.3.7") 
+[6.761s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[7.467s] -- Added test 'copyright' to check source files copyright and LICENSE
+[7.470s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[7.471s] -- Configured cppcheck include dirs: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/zed_wrapper/src
+[7.471s] -- Configured cppcheck exclude dirs and/or files: 
+[7.472s] -- Added test 'lint_cmake' to check CMake code style
+[7.474s] -- Added test 'pep257' to check Python code against some of the style conventions in PEP 257
+[7.477s] -- Added test 'uncrustify' to check C / C++ code style
+[7.477s] -- Configured uncrustify additional arguments: 
+[7.478s] -- Added test 'xmllint' to check XML markup files
+[7.489s] -- Configuring done
+[7.576s] -- Generating done
+[7.581s] -- Build files have been written to: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/build/zed_wrapper
+[7.612s] Invoked command in '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/build/zed_wrapper' returned '0': AMENT_PREFIX_PATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components:/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components:/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces:/opt/ros/foxy LD_LIBRARY_PATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/lib:/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.4/lib64:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib PYTHONPATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/usr/lib/python3.8/site-packages/range_libc-0.1-py3.8-linux-aarch64.egg /usr/bin/cmake /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/zed_wrapper -DCMAKE_INSTALL_PREFIX=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper
+[7.618s] Invoking command in '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/build/zed_wrapper': AMENT_PREFIX_PATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components:/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components:/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces:/opt/ros/foxy LD_LIBRARY_PATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/lib:/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.4/lib64:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib PYTHONPATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/usr/lib/python3.8/site-packages/range_libc-0.1-py3.8-linux-aarch64.egg /usr/bin/cmake --build /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/build/zed_wrapper -- -j6 -l6
+[7.714s] [35m[1mScanning dependencies of target zed_wrapper[0m
+[7.875s] [ 50%] [32mBuilding CXX object CMakeFiles/zed_wrapper.dir/src/zed_wrapper.cpp.o[0m
+[11.306s] In file included from [01m[K/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/include/zed_components/zed_camera_component.hpp:19[m[K,
+[11.306s]                  from [01m[K/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/zed_wrapper/src/zed_wrapper.cpp:17[m[K:
+[11.306s] [01m[K/usr/local/zed/include/sl/Fusion.hpp:68:64:[m[K [01;36m[Knote: [m[K#pragma message: ~ FUSION SDK is distributed in Early Access ~
+[11.306s]    68 | #pragma message("~ FUSION SDK is distributed in Early Access ~"[01;36m[K)[m[K
+[11.306s]       |                                                                [01;36m[K^[m[K
+[15.936s] [100%] [32m[1mLinking CXX executable zed_wrapper[0m
+[16.548s] [100%] Built target zed_wrapper
+[16.572s] Invoked command in '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/build/zed_wrapper' returned '0': AMENT_PREFIX_PATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components:/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components:/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces:/opt/ros/foxy LD_LIBRARY_PATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/lib:/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.4/lib64:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib PYTHONPATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/usr/lib/python3.8/site-packages/range_libc-0.1-py3.8-linux-aarch64.egg /usr/bin/cmake --build /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/build/zed_wrapper -- -j6 -l6
+[16.633s] Invoking command in '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/build/zed_wrapper': AMENT_PREFIX_PATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components:/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components:/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces:/opt/ros/foxy LD_LIBRARY_PATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/lib:/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.4/lib64:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib PYTHONPATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/usr/lib/python3.8/site-packages/range_libc-0.1-py3.8-linux-aarch64.egg /usr/bin/cmake --install /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/build/zed_wrapper
+[16.653s] -- Install configuration: "Release"
+[16.653s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper/lib/zed_wrapper/zed_wrapper
+[16.654s] -- Set runtime path of "/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper/lib/zed_wrapper/zed_wrapper" to ""
+[16.654s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper/share/zed_wrapper/config
+[16.654s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper/share/zed_wrapper/config/zedx.yaml
+[16.655s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper/share/zed_wrapper/config/zedm.yaml
+[16.655s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper/share/zed_wrapper/config/zed.yaml
+[16.655s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper/share/zed_wrapper/config/zedxm.yaml
+[16.655s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper/share/zed_wrapper/config/zed2.yaml
+[16.656s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper/share/zed_wrapper/config/common.yaml
+[16.656s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper/share/zed_wrapper/config/zed2i.yaml
+[16.656s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper/share/zed_wrapper/urdf
+[16.657s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper/share/zed_wrapper/urdf/zed_macro.urdf.xacro
+[16.657s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper/share/zed_wrapper/urdf/include
+[16.657s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper/share/zed_wrapper/urdf/include/materials.urdf.xacro
+[16.657s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper/share/zed_wrapper/urdf/zed_descr.urdf.xacro
+[16.658s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper/share/zed_wrapper/launch
+[16.658s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper/share/zed_wrapper/launch/zed_camera.launch.py
+[16.658s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper/share/zed_wrapper/launch/obsolete
+[16.658s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper/share/zed_wrapper/launch/obsolete/zedxm.launch.py
+[16.659s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper/share/zed_wrapper/launch/obsolete/zedx.launch.py
+[16.659s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper/share/zed_wrapper/launch/obsolete/zed2.launch.py
+[16.659s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper/share/zed_wrapper/launch/obsolete/zed2i.launch.py
+[16.660s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper/share/zed_wrapper/launch/obsolete/zed.launch.py
+[16.660s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper/share/zed_wrapper/launch/obsolete/zedm.launch.py
+[16.661s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper/share/ament_index/resource_index/package_run_dependencies/zed_wrapper
+[16.661s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper/share/ament_index/resource_index/parent_prefix_path/zed_wrapper
+[16.662s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper/share/zed_wrapper/environment/ament_prefix_path.sh
+[16.662s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper/share/zed_wrapper/environment/ament_prefix_path.dsv
+[16.662s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper/share/zed_wrapper/environment/path.sh
+[16.663s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper/share/zed_wrapper/environment/path.dsv
+[16.663s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper/share/zed_wrapper/local_setup.bash
+[16.663s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper/share/zed_wrapper/local_setup.sh
+[16.663s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper/share/zed_wrapper/local_setup.zsh
+[16.664s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper/share/zed_wrapper/local_setup.dsv
+[16.664s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper/share/zed_wrapper/package.dsv
+[16.664s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper/share/ament_index/resource_index/packages/zed_wrapper
+[16.665s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper/share/zed_wrapper/cmake/zed_wrapperConfig.cmake
+[16.665s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper/share/zed_wrapper/cmake/zed_wrapperConfig-version.cmake
+[16.665s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper/share/zed_wrapper/package.xml
+[16.670s] Invoked command in '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/build/zed_wrapper' returned '0': AMENT_PREFIX_PATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components:/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components:/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces:/opt/ros/foxy LD_LIBRARY_PATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/lib:/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.4/lib64:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib PYTHONPATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/usr/lib/python3.8/site-packages/range_libc-0.1-py3.8-linux-aarch64.egg /usr/bin/cmake --install /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/build/zed_wrapper

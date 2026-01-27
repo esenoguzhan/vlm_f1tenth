@@ -1,0 +1,62 @@
+-- Found CUDA: /usr/local/cuda-11.4 (found suitable version "11.4", minimum required is "11.4") 
+-- Found CUDA: /usr/local/cuda-11.4 (found version "11.4") 
+-- Found ament_cmake_auto: 0.9.12 (/opt/ros/foxy/share/ament_cmake_auto/cmake)
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found eigen3_cmake_module: 0.1.1 (/opt/ros/foxy/share/eigen3_cmake_module/cmake)
+-- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+-- Added test 'copyright' to check source files copyright and LICENSE
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/zed_components/src/include;/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/zed_components/src/zed_camera/include;/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/zed_components/src/tools/include
+-- Configured cppcheck exclude dirs and/or files: 
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'uncrustify' to check C / C++ code style
+-- Configured uncrustify additional arguments: 
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/build/zed_components
+[35m[1mScanning dependencies of target zed_camera_component[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/zed_camera_component.dir/src/tools/src/sl_win_avg.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/zed_camera_component.dir/src/tools/src/sl_tools.cpp.o[0m
+[ 75%] [32mBuilding CXX object CMakeFiles/zed_camera_component.dir/src/zed_camera/src/zed_camera_component.cpp.o[0m
+[100%] [32m[1mLinking CXX shared library libzed_camera_component.so[0m
+[100%] Built target zed_camera_component
+-- Install configuration: "Release"
+-- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/lib/libzed_camera_component.so
+-- Set runtime path of "/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/lib/libzed_camera_component.so" to ""
+-- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/include/zed_components/
+-- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/include/zed_components//cost_traversability.hpp
+-- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/include/zed_components//sl_types.hpp
+-- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/include/zed_components//zed_camera_component.hpp
+-- Up-to-date: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/include/zed_components/
+-- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/include/zed_components//sl_win_avg.hpp
+-- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/include/zed_components//sl_tools.hpp
+-- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/include/zed_components//sl_logging.hpp
+-- Up-to-date: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/include/zed_components/
+-- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/include/zed_components//visibility_control.hpp
+-- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/share/zed_components/environment/library_path.sh
+-- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/share/zed_components/environment/library_path.dsv
+-- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/share/ament_index/resource_index/package_run_dependencies/zed_components
+-- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/share/ament_index/resource_index/parent_prefix_path/zed_components
+-- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/share/zed_components/environment/ament_prefix_path.sh
+-- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/share/zed_components/environment/ament_prefix_path.dsv
+-- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/share/zed_components/environment/path.sh
+-- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/share/zed_components/environment/path.dsv
+-- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/share/zed_components/local_setup.bash
+-- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/share/zed_components/local_setup.sh
+-- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/share/zed_components/local_setup.zsh
+-- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/share/zed_components/local_setup.dsv
+-- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/share/zed_components/package.dsv
+-- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/share/ament_index/resource_index/packages/zed_components
+-- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/share/ament_index/resource_index/rclcpp_components/zed_components
+-- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/share/zed_components/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/share/zed_components/cmake/ament_cmake_export_libraries-extras.cmake
+-- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/share/zed_components/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/share/zed_components/cmake/zed_componentsConfig.cmake
+-- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/share/zed_components/cmake/zed_componentsConfig-version.cmake
+-- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/share/zed_components/package.xml

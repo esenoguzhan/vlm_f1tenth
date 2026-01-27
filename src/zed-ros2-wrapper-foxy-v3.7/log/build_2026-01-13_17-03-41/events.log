@@ -1,0 +1,144 @@
+[0.000000] (-) TimerEvent: {}
+[0.000767] (zed_components) JobQueued: {'identifier': 'zed_components', 'dependencies': OrderedDict()}
+[0.001006] (zed_wrapper) JobQueued: {'identifier': 'zed_wrapper', 'dependencies': OrderedDict([('zed_components', '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components')])}
+[0.001491] (zed_ros2) JobQueued: {'identifier': 'zed_ros2', 'dependencies': OrderedDict([('zed_components', '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components'), ('zed_wrapper', '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper')])}
+[0.001834] (zed_components) JobStarted: {'identifier': 'zed_components'}
+[0.099370] (-) TimerEvent: {}
+[0.106645] (zed_components) JobProgress: {'identifier': 'zed_components', 'progress': 'cmake'}
+[0.107185] (zed_components) Command: {'cmd': ['/usr/bin/cmake', '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/zed_components', '-DCMAKE_INSTALL_PREFIX=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components'], 'cwd': '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/build/zed_components', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'f1tenth'), ('SSH_AGENT_PID', '2320'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.4/lib64::/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib'), ('HOME', '/home/f1tenth'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1557'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=7cb8941390d93cab451e2ca5695faec6'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'f1tenth'), ('JOURNAL_STREAM', '8:52661'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'f1tenth'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '1'), ('WINDOWPATH', '2'), ('PATH', '/home/f1tenth/anaconda3/bin:/opt/ros/foxy/bin:/usr/local/cuda-11.4/bin:/home/f1tenth/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/ubuntu:@/tmp/.ICE-unix/2356,unix/ubuntu:/tmp/.ICE-unix/2356'), ('INVOCATION_ID', '39e9d1133a8f4bf8897334a7e443e0f0'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/5fbcd320_2f41_4222_ac70_41836ba8159d'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.106'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/build/zed_components'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=7cb8941390d93cab451e2ca5695faec6'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages::/usr/lib/python3.8/site-packages/range_libc-0.1-py3.8-linux-aarch64.egg'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[0.199662] (-) TimerEvent: {}
+[0.235004] (zed_components) StdoutLine: {'line': b'-- The C compiler identification is GNU 9.4.0\n'}
+[0.299661] (-) TimerEvent: {}
+[0.335668] (zed_components) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 9.4.0\n'}
+[0.343995] (zed_components) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc\n'}
+[0.399828] (-) TimerEvent: {}
+[0.487389] (zed_components) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc -- works\n'}
+[0.489032] (zed_components) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.499918] (-) TimerEvent: {}
+[0.600467] (-) TimerEvent: {}
+[0.632878] (zed_components) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.651104] (zed_components) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.651626] (zed_components) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.656361] (zed_components) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++\n'}
+[0.700636] (-) TimerEvent: {}
+[0.801312] (-) TimerEvent: {}
+[0.814871] (zed_components) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ -- works\n'}
+[0.816798] (zed_components) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.901482] (-) TimerEvent: {}
+[0.973915] (zed_components) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.992994] (zed_components) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.993865] (zed_components) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[1.001115] (zed_components) StdoutLine: {'line': b'-- Looking for sgemm_\n'}
+[1.001518] (-) TimerEvent: {}
+[1.101971] (-) TimerEvent: {}
+[1.145901] (zed_components) StdoutLine: {'line': b'-- Looking for sgemm_ - not found\n'}
+[1.148132] (zed_components) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[1.202142] (-) TimerEvent: {}
+[1.297240] (zed_components) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[1.297798] (zed_components) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[1.302212] (-) TimerEvent: {}
+[1.402721] (-) TimerEvent: {}
+[1.450275] (zed_components) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed\n'}
+[1.450823] (zed_components) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads\n'}
+[1.502895] (-) TimerEvent: {}
+[1.577518] (zed_components) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads - not found\n'}
+[1.578059] (zed_components) StdoutLine: {'line': b'-- Looking for pthread_create in pthread\n'}
+[1.603068] (-) TimerEvent: {}
+[1.703778] (-) TimerEvent: {}
+[1.723200] (zed_components) StdoutLine: {'line': b'-- Looking for pthread_create in pthread - found\n'}
+[1.724883] (zed_components) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[1.767629] (zed_components) StdoutLine: {'line': b'-- Looking for sgemm_\n'}
+[1.803955] (-) TimerEvent: {}
+[1.904669] (-) TimerEvent: {}
+[1.953806] (zed_components) StdoutLine: {'line': b'-- Looking for sgemm_ - found\n'}
+[1.954816] (zed_components) StdoutLine: {'line': b'-- Found BLAS: /usr/lib/aarch64-linux-gnu/libopenblas.so  \n'}
+[1.985309] (zed_components) StdoutLine: {'line': b'-- Found CUDA: /usr/local/cuda-11.4 (found suitable version "11.4", minimum required is "11.4") \n'}
+[2.004835] (-) TimerEvent: {}
+[2.032763] (zed_components) StdoutLine: {'line': b'-- Found CUDA: /usr/local/cuda-11.4 (found version "11.4") \n'}
+[2.039126] (zed_components) StdoutLine: {'line': b'-- Found ament_cmake_auto: 0.9.12 (/opt/ros/foxy/share/ament_cmake_auto/cmake)\n'}
+[2.095296] (zed_components) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") \n'}
+[2.095844] (zed_components) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[2.104972] (-) TimerEvent: {}
+[2.205569] (-) TimerEvent: {}
+[2.306188] (-) TimerEvent: {}
+[2.406816] (-) TimerEvent: {}
+[2.507440] (-) TimerEvent: {}
+[2.608159] (-) TimerEvent: {}
+[2.708791] (-) TimerEvent: {}
+[2.809422] (-) TimerEvent: {}
+[2.819821] (zed_components) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[2.831988] (zed_components) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)\n'}
+[2.909604] (-) TimerEvent: {}
+[3.008475] (zed_components) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "1.1.1f")  \n'}
+[3.009673] (-) TimerEvent: {}
+[3.061618] (zed_components) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/foxy/include  \n'}
+[3.109870] (-) TimerEvent: {}
+[3.210517] (-) TimerEvent: {}
+[3.214228] (zed_components) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[3.310678] (-) TimerEvent: {}
+[3.317113] (zed_components) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)\n'}
+[3.319595] (zed_components) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[3.410845] (-) TimerEvent: {}
+[3.511524] (-) TimerEvent: {}
+[3.612179] (-) TimerEvent: {}
+[3.712834] (-) TimerEvent: {}
+[3.813488] (-) TimerEvent: {}
+[3.914135] (-) TimerEvent: {}
+[4.014796] (-) TimerEvent: {}
+[4.115535] (-) TimerEvent: {}
+[4.216199] (-) TimerEvent: {}
+[4.316862] (-) TimerEvent: {}
+[4.417518] (-) TimerEvent: {}
+[4.518173] (-) TimerEvent: {}
+[4.618831] (-) TimerEvent: {}
+[4.719498] (-) TimerEvent: {}
+[4.820144] (-) TimerEvent: {}
+[4.920798] (-) TimerEvent: {}
+[5.021435] (-) TimerEvent: {}
+[5.055253] (zed_components) StdoutLine: {'line': b'-- Found eigen3_cmake_module: 0.1.1 (/opt/ros/foxy/share/eigen3_cmake_module/cmake)\n'}
+[5.060738] (zed_components) StdoutLine: {'line': b'-- Found Eigen3: TRUE (found version "3.3.7") \n'}
+[5.121590] (-) TimerEvent: {}
+[5.222243] (-) TimerEvent: {}
+[5.322907] (-) TimerEvent: {}
+[5.423572] (-) TimerEvent: {}
+[5.524215] (-) TimerEvent: {}
+[5.624866] (-) TimerEvent: {}
+[5.725501] (-) TimerEvent: {}
+[5.826164] (-) TimerEvent: {}
+[5.830102] (zed_components) StderrLine: {'line': b'CMake Warning at CMakeLists.txt:119 (find_package):\n'}
+[5.830656] (zed_components) StderrLine: {'line': b'  By not providing "Findzed_interfaces.cmake" in CMAKE_MODULE_PATH this\n'}
+[5.830827] (zed_components) StderrLine: {'line': b'  project has asked CMake to find a package configuration file provided by\n'}
+[5.830975] (zed_components) StderrLine: {'line': b'  "zed_interfaces", but CMake did not find one.\n'}
+[5.831126] (zed_components) StderrLine: {'line': b'\n'}
+[5.831268] (zed_components) StderrLine: {'line': b'  Could not find a package configuration file provided by "zed_interfaces"\n'}
+[5.831408] (zed_components) StderrLine: {'line': b'  with any of the following names:\n'}
+[5.831561] (zed_components) StderrLine: {'line': b'\n'}
+[5.831717] (zed_components) StderrLine: {'line': b'    zed_interfacesConfig.cmake\n'}
+[5.831842] (zed_components) StderrLine: {'line': b'    zed_interfaces-config.cmake\n'}
+[5.831964] (zed_components) StderrLine: {'line': b'\n'}
+[5.832084] (zed_components) StderrLine: {'line': b'  Add the installation prefix of "zed_interfaces" to CMAKE_PREFIX_PATH or set\n'}
+[5.832204] (zed_components) StderrLine: {'line': b'  "zed_interfaces_DIR" to a directory containing one of the above files.  If\n'}
+[5.832322] (zed_components) StderrLine: {'line': b'  "zed_interfaces" provides a separate development package or SDK, be sure it\n'}
+[5.832440] (zed_components) StderrLine: {'line': b'  has been installed.\n'}
+[5.832555] (zed_components) StderrLine: {'line': b'\n'}
+[5.832669] (zed_components) StderrLine: {'line': b'\n'}
+[5.839172] (zed_components) StdoutLine: {'line': b'-- Found shape_msgs: 2.0.5 (/opt/ros/foxy/share/shape_msgs/cmake)\n'}
+[5.926314] (-) TimerEvent: {}
+[5.952945] (zed_components) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)\n'}
+[5.978083] (zed_components) StderrLine: {'line': b'CMake Error at /opt/ros/foxy/share/ament_cmake_target_dependencies/cmake/ament_target_dependencies.cmake:77 (message):\n'}
+[5.978511] (zed_components) StderrLine: {'line': b"  ament_target_dependencies() the passed package name 'zed_interfaces' was\n"}
+[5.978671] (zed_components) StderrLine: {'line': b'  not found before\n'}
+[5.978847] (zed_components) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[5.978984] (zed_components) StderrLine: {'line': b'  CMakeLists.txt:212 (ament_target_dependencies)\n'}
+[5.979113] (zed_components) StderrLine: {'line': b'\n'}
+[5.979239] (zed_components) StderrLine: {'line': b'\n'}
+[5.985411] (zed_components) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[5.985653] (zed_components) StdoutLine: {'line': b'See also "/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/build/zed_components/CMakeFiles/CMakeOutput.log".\n'}
+[5.985801] (zed_components) StdoutLine: {'line': b'See also "/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/build/zed_components/CMakeFiles/CMakeError.log".\n'}
+[6.016665] (zed_components) CommandEnded: {'returncode': 1}
+[6.026623] (-) TimerEvent: {}
+[6.124423] (zed_components) JobEnded: {'identifier': 'zed_components', 'rc': 1}
+[6.126676] (-) TimerEvent: {}
+[6.135418] (zed_wrapper) JobSkipped: {'identifier': 'zed_wrapper'}
+[6.135555] (zed_ros2) JobSkipped: {'identifier': 'zed_ros2'}
+[6.135611] (-) EventReactorShutdown: {}

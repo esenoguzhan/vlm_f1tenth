@@ -1,0 +1,24 @@
+CMake Warning at CMakeLists.txt:119 (find_package):
+  By not providing "Findzed_interfaces.cmake" in CMAKE_MODULE_PATH this
+  project has asked CMake to find a package configuration file provided by
+  "zed_interfaces", but CMake did not find one.
+
+  Could not find a package configuration file provided by "zed_interfaces"
+  with any of the following names:
+
+    zed_interfacesConfig.cmake
+    zed_interfaces-config.cmake
+
+  Add the installation prefix of "zed_interfaces" to CMAKE_PREFIX_PATH or set
+  "zed_interfaces_DIR" to a directory containing one of the above files.  If
+  "zed_interfaces" provides a separate development package or SDK, be sure it
+  has been installed.
+
+
+CMake Error at /opt/ros/foxy/share/ament_cmake_target_dependencies/cmake/ament_target_dependencies.cmake:77 (message):
+  ament_target_dependencies() the passed package name 'zed_interfaces' was
+  not found before
+Call Stack (most recent call first):
+  CMakeLists.txt:212 (ament_target_dependencies)
+
+

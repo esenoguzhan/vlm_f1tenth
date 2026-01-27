@@ -1,0 +1,746 @@
+[0.099s] Invoking command in '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/build/zed_interfaces': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/zed-ros2-interfaces -DCMAKE_INSTALL_PREFIX=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces
+[0.260s] -- The C compiler identification is GNU 9.4.0
+[0.368s] -- The CXX compiler identification is GNU 9.4.0
+[0.378s] -- Check for working C compiler: /usr/bin/cc
+[0.521s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.524s] -- Detecting C compiler ABI info
+[0.677s] -- Detecting C compiler ABI info - done
+[0.709s] -- Detecting C compile features
+[0.710s] -- Detecting C compile features - done
+[0.716s] -- Check for working CXX compiler: /usr/bin/c++
+[0.882s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.885s] -- Detecting CXX compiler ABI info
+[1.052s] -- Detecting CXX compiler ABI info - done
+[1.084s] -- Detecting CXX compile features
+[1.085s] -- Detecting CXX compile features - done
+[1.090s] -- Found ament_cmake_auto: 0.9.12 (/opt/ros/foxy/share/ament_cmake_auto/cmake)
+[1.148s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[1.148s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.830s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.844s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[2.020s] -- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[2.079s] -- Found FastRTPS: /opt/ros/foxy/include  
+[2.228s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.514s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[2.595s] -- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") 
+[3.044s] -- Found ament_cmake_ros: 0.9.2 (/opt/ros/foxy/share/ament_cmake_ros/cmake)
+[3.549s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[3.774s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[3.832s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3.5") 
+[3.835s] -- Found python_cmake_module: 0.8.1 (/opt/ros/foxy/share/python_cmake_module/cmake)
+[3.895s] -- Found PythonLibs: /usr/lib/aarch64-linux-gnu/libpython3.8.so (found suitable version "3.8.10", minimum required is "3.5") 
+[3.895s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[3.895s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8
+[3.895s] -- Using PYTHON_LIBRARIES: /usr/lib/aarch64-linux-gnu/libpython3.8.so
+[3.941s] -- Found PythonExtra: .so  
+[4.672s] -- Added test 'copyright' to check source files copyright and LICENSE
+[4.677s] -- Added test 'lint_cmake' to check CMake code style
+[4.682s] -- Added test 'xmllint' to check XML markup files
+[4.698s] -- Configuring done
+[4.893s] -- Generating done
+[4.899s] -- Build files have been written to: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/build/zed_interfaces
+[4.929s] Invoked command in '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/build/zed_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/zed-ros2-interfaces -DCMAKE_INSTALL_PREFIX=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces
+[4.936s] Invoking command in '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/build/zed_interfaces': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/build/zed_interfaces -- -j6 -l6
+[5.040s] [  1%] [34m[1mGenerating C code for ROS interfaces[0m
+[5.041s] [35m[1mScanning dependencies of target zed_interfaces__cpp[0m
+[5.068s] [  1%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[8.850s] [  1%] Built target zed_interfaces__cpp
+[8.874s] [  2%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[8.882s] [  3%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[8.901s] [  3%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[9.497s] [35m[1mScanning dependencies of target zed_interfaces__rosidl_generator_c[0m
+[9.547s] [  4%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_c.dir/rosidl_generator_c/zed_interfaces/msg/detail/keypoint2_di__functions.c.o[0m
+[9.548s] [  4%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_c.dir/rosidl_generator_c/zed_interfaces/msg/detail/objects_stamped__functions.c.o[0m
+[9.549s] [  4%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_c.dir/rosidl_generator_c/zed_interfaces/msg/detail/object__functions.c.o[0m
+[9.662s] [  6%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_c.dir/rosidl_generator_c/zed_interfaces/msg/detail/keypoint3_d__functions.c.o[0m
+[9.662s] [  6%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_c.dir/rosidl_generator_c/zed_interfaces/msg/detail/keypoint2_df__functions.c.o[0m
+[9.681s] [  6%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_c.dir/rosidl_generator_c/zed_interfaces/msg/detail/bounding_box2_di__functions.c.o[0m
+[9.782s] [  7%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_c.dir/rosidl_generator_c/zed_interfaces/msg/detail/bounding_box2_df__functions.c.o[0m
+[9.784s] [  7%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_c.dir/rosidl_generator_c/zed_interfaces/msg/detail/bounding_box3_d__functions.c.o[0m
+[9.796s] [  8%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_c.dir/rosidl_generator_c/zed_interfaces/msg/detail/skeleton2_d__functions.c.o[0m
+[9.891s] [  8%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_c.dir/rosidl_generator_c/zed_interfaces/msg/detail/skeleton3_d__functions.c.o[0m
+[9.901s] [  9%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_c.dir/rosidl_generator_c/zed_interfaces/msg/detail/depth_info_stamped__functions.c.o[0m
+[9.910s] [ 10%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_c.dir/rosidl_generator_c/zed_interfaces/msg/detail/plane_stamped__functions.c.o[0m
+[9.994s] [ 10%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_c.dir/rosidl_generator_c/zed_interfaces/msg/detail/pos_track_status__functions.c.o[0m
+[10.024s] [ 11%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_c.dir/rosidl_generator_c/zed_interfaces/msg/detail/gnss_fusion_status__functions.c.o[0m
+[10.040s] [ 11%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_c.dir/rosidl_generator_c/zed_interfaces/msg/detail/heartbeat__functions.c.o[0m
+[10.091s] [ 12%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_c.dir/rosidl_generator_c/zed_interfaces/msg/detail/mag_heading_status__functions.c.o[0m
+[10.150s] [ 13%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_c.dir/rosidl_generator_c/zed_interfaces/srv/detail/start_svo_rec__functions.c.o[0m
+[10.150s] [ 13%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_c.dir/rosidl_generator_c/zed_interfaces/srv/detail/set_pose__functions.c.o[0m
+[10.195s] [ 14%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_c.dir/rosidl_generator_c/zed_interfaces/srv/detail/set_roi__functions.c.o[0m
+[10.323s] [ 14%] [32m[1mLinking C shared library libzed_interfaces__rosidl_generator_c.so[0m
+[10.412s] [ 14%] Built target zed_interfaces__rosidl_generator_c
+[10.438s] [ 16%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[10.439s] [ 16%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[11.762s] [35m[1mScanning dependencies of target zed_interfaces__rosidl_typesupport_cpp[0m
+[11.808s] [ 17%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_interfaces/msg/object__type_support.cpp.o[0m
+[11.808s] [ 17%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_interfaces/msg/objects_stamped__type_support.cpp.o[0m
+[12.522s] [ 18%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_interfaces/msg/keypoint2_di__type_support.cpp.o[0m
+[12.536s] [ 18%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_interfaces/msg/keypoint2_df__type_support.cpp.o[0m
+[12.922s] [35m[1mScanning dependencies of target zed_interfaces__rosidl_typesupport_introspection_cpp[0m
+[12.974s] [ 19%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_interfaces/msg/detail/object__type_support.cpp.o[0m
+[13.019s] [35m[1mScanning dependencies of target zed_interfaces__rosidl_typesupport_fastrtps_cpp[0m
+[13.085s] [ 20%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_interfaces/msg/detail/dds_fastrtps/object__type_support.cpp.o[0m
+[13.210s] [ 20%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_interfaces/msg/detail/dds_fastrtps/objects_stamped__type_support.cpp.o[0m
+[13.214s] [ 21%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_interfaces/msg/keypoint3_d__type_support.cpp.o[0m
+[13.461s] [35m[1mScanning dependencies of target zed_interfaces__rosidl_typesupport_c[0m
+[13.507s] [ 21%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_interfaces/msg/object__type_support.cpp.o[0m
+[13.593s] [ 22%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_interfaces/msg/objects_stamped__type_support.cpp.o[0m
+[13.676s] [ 22%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_interfaces/msg/keypoint2_di__type_support.cpp.o[0m
+[13.752s] [ 23%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_interfaces/msg/keypoint2_df__type_support.cpp.o[0m
+[13.816s] [ 23%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_interfaces/msg/detail/objects_stamped__type_support.cpp.o[0m
+[13.825s] [ 24%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_interfaces/msg/keypoint3_d__type_support.cpp.o[0m
+[13.895s] [ 24%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_interfaces/msg/bounding_box2_di__type_support.cpp.o[0m
+[13.895s] [ 24%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_interfaces/msg/bounding_box2_di__type_support.cpp.o[0m
+[13.966s] [ 25%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_interfaces/msg/bounding_box2_df__type_support.cpp.o[0m
+[14.039s] [ 25%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_interfaces/msg/bounding_box3_d__type_support.cpp.o[0m
+[14.110s] [ 26%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_interfaces/msg/skeleton2_d__type_support.cpp.o[0m
+[14.111s] [ 27%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_interfaces/msg/detail/dds_fastrtps/keypoint2_di__type_support.cpp.o[0m
+[14.181s] [ 27%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_interfaces/msg/skeleton3_d__type_support.cpp.o[0m
+[14.253s] [ 28%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_interfaces/msg/depth_info_stamped__type_support.cpp.o[0m
+[14.326s] [ 29%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_interfaces/msg/plane_stamped__type_support.cpp.o[0m
+[14.386s] [35m[1mScanning dependencies of target zed_interfaces__rosidl_typesupport_introspection_c[0m
+[14.403s] [ 29%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_interfaces/msg/pos_track_status__type_support.cpp.o[0m
+[14.448s] [ 30%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_interfaces/msg/detail/object__type_support.c.o[0m
+[14.477s] [ 31%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_interfaces/msg/gnss_fusion_status__type_support.cpp.o[0m
+[14.514s] [ 31%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_interfaces/msg/detail/objects_stamped__type_support.c.o[0m
+[14.537s] [ 31%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_interfaces/msg/detail/dds_fastrtps/keypoint2_df__type_support.cpp.o[0m
+[14.552s] [ 31%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_interfaces/msg/heartbeat__type_support.cpp.o[0m
+[14.577s] [ 32%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_interfaces/msg/bounding_box2_df__type_support.cpp.o[0m
+[14.602s] [ 33%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_interfaces/msg/detail/keypoint2_di__type_support.c.o[0m
+[14.627s] [ 34%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_interfaces/msg/mag_heading_status__type_support.cpp.o[0m
+[14.677s] [ 34%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_interfaces/msg/detail/keypoint2_df__type_support.c.o[0m
+[14.697s] [ 34%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_interfaces/srv/set_pose__type_support.cpp.o[0m
+[14.698s] [ 35%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_interfaces/msg/detail/keypoint2_di__type_support.cpp.o[0m
+[14.752s] [ 36%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_interfaces/msg/detail/keypoint3_d__type_support.c.o[0m
+[14.774s] [ 37%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_interfaces/srv/start_svo_rec__type_support.cpp.o[0m
+[14.827s] [ 37%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_interfaces/msg/detail/bounding_box2_di__type_support.c.o[0m
+[14.852s] [ 38%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_interfaces/srv/set_roi__type_support.cpp.o[0m
+[14.906s] [ 39%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_interfaces/msg/detail/bounding_box2_df__type_support.c.o[0m
+[14.928s] [ 39%] [32m[1mLinking CXX shared library libzed_interfaces__rosidl_typesupport_c.so[0m
+[14.998s] [ 40%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_interfaces/msg/detail/bounding_box3_d__type_support.c.o[0m
+[15.035s] [ 40%] Built target zed_interfaces__rosidl_typesupport_c
+[15.059s] [ 40%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_interfaces/msg/detail/skeleton2_d__type_support.c.o[0m
+[15.084s] [ 41%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_interfaces/msg/detail/skeleton3_d__type_support.c.o[0m
+[15.097s] [ 41%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_interfaces/msg/bounding_box3_d__type_support.cpp.o[0m
+[15.140s] [ 41%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_interfaces/msg/detail/depth_info_stamped__type_support.c.o[0m
+[15.164s] [ 42%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_interfaces/msg/detail/plane_stamped__type_support.c.o[0m
+[15.216s] [ 43%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_interfaces/msg/skeleton2_d__type_support.cpp.o[0m
+[15.251s] [ 43%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_interfaces/msg/detail/pos_track_status__type_support.c.o[0m
+[15.276s] [ 44%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_interfaces/msg/detail/gnss_fusion_status__type_support.c.o[0m
+[15.330s] [ 45%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_interfaces/msg/detail/heartbeat__type_support.c.o[0m
+[15.369s] [ 45%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_interfaces/msg/detail/keypoint2_df__type_support.cpp.o[0m
+[15.374s] [ 46%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_interfaces/msg/skeleton3_d__type_support.cpp.o[0m
+[15.412s] [ 46%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_interfaces/msg/detail/mag_heading_status__type_support.c.o[0m
+[15.486s] [ 47%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_interfaces/srv/detail/set_pose__type_support.c.o[0m
+[15.544s] [ 48%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_interfaces/msg/detail/dds_fastrtps/keypoint3_d__type_support.cpp.o[0m
+[15.572s] [ 48%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_interfaces/srv/detail/start_svo_rec__type_support.c.o[0m
+[15.657s] [ 49%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_interfaces/srv/detail/set_roi__type_support.c.o[0m
+[15.739s] [ 49%] [32m[1mLinking C shared library libzed_interfaces__rosidl_typesupport_introspection_c.so[0m
+[15.764s] [ 49%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_interfaces/msg/depth_info_stamped__type_support.cpp.o[0m
+[15.823s] [ 49%] Built target zed_interfaces__rosidl_typesupport_introspection_c
+[15.847s] [ 50%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_interfaces/msg/plane_stamped__type_support.cpp.o[0m
+[15.912s] [ 50%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_interfaces/msg/detail/dds_fastrtps/bounding_box2_di__type_support.cpp.o[0m
+[16.033s] [ 51%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_interfaces/msg/detail/keypoint3_d__type_support.cpp.o[0m
+[16.105s] [ 52%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_interfaces/msg/detail/bounding_box2_di__type_support.cpp.o[0m
+[16.419s] [ 52%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_interfaces/msg/detail/bounding_box2_df__type_support.cpp.o[0m
+[16.496s] [ 52%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_interfaces/msg/pos_track_status__type_support.cpp.o[0m
+[16.521s] [ 53%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_interfaces/msg/gnss_fusion_status__type_support.cpp.o[0m
+[16.683s] [ 54%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_interfaces/msg/detail/dds_fastrtps/bounding_box2_df__type_support.cpp.o[0m
+[16.790s] [ 55%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_interfaces/msg/detail/bounding_box3_d__type_support.cpp.o[0m
+[16.980s] [ 56%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_interfaces/msg/detail/dds_fastrtps/bounding_box3_d__type_support.cpp.o[0m
+[17.129s] [ 57%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_interfaces/msg/detail/skeleton3_d__type_support.cpp.o[0m
+[17.138s] [ 57%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_interfaces/msg/detail/skeleton2_d__type_support.cpp.o[0m
+[17.187s] [ 57%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_interfaces/msg/heartbeat__type_support.cpp.o[0m
+[17.495s] [ 58%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_interfaces/msg/mag_heading_status__type_support.cpp.o[0m
+[17.609s] [ 58%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_interfaces/msg/detail/dds_fastrtps/skeleton2_d__type_support.cpp.o[0m
+[17.812s] [ 59%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_interfaces/msg/detail/dds_fastrtps/skeleton3_d__type_support.cpp.o[0m
+[17.840s] [ 59%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_interfaces/msg/detail/dds_fastrtps/depth_info_stamped__type_support.cpp.o[0m
+[17.876s] [ 59%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_interfaces/msg/detail/depth_info_stamped__type_support.cpp.o[0m
+[17.989s] [ 60%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_interfaces/msg/detail/plane_stamped__type_support.cpp.o[0m
+[18.163s] [ 61%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_interfaces/srv/set_pose__type_support.cpp.o[0m
+[18.528s] [ 61%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_interfaces/srv/start_svo_rec__type_support.cpp.o[0m
+[18.586s] [ 62%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_interfaces/srv/set_roi__type_support.cpp.o[0m
+[18.741s] [ 63%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_interfaces/msg/detail/dds_fastrtps/plane_stamped__type_support.cpp.o[0m
+[18.827s] [ 64%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_interfaces/msg/detail/pos_track_status__type_support.cpp.o[0m
+[18.838s] [ 64%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_interfaces/msg/detail/dds_fastrtps/pos_track_status__type_support.cpp.o[0m
+[18.875s] [ 65%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_interfaces/msg/detail/dds_fastrtps/gnss_fusion_status__type_support.cpp.o[0m
+[19.165s] [ 66%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_interfaces/msg/detail/dds_fastrtps/heartbeat__type_support.cpp.o[0m
+[19.285s] [ 66%] [32m[1mLinking CXX shared library libzed_interfaces__rosidl_typesupport_cpp.so[0m
+[19.389s] [ 66%] Built target zed_interfaces__rosidl_typesupport_cpp
+[19.414s] [ 66%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_interfaces/msg/detail/gnss_fusion_status__type_support.cpp.o[0m
+[19.470s] [ 67%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_interfaces/msg/detail/heartbeat__type_support.cpp.o[0m
+[19.722s] [ 67%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_interfaces/msg/detail/dds_fastrtps/mag_heading_status__type_support.cpp.o[0m
+[19.836s] [ 68%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_interfaces/srv/detail/dds_fastrtps/set_pose__type_support.cpp.o[0m
+[19.864s] [ 68%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_interfaces/srv/detail/dds_fastrtps/start_svo_rec__type_support.cpp.o[0m
+[20.067s] [ 68%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_interfaces/msg/detail/mag_heading_status__type_support.cpp.o[0m
+[20.124s] [ 69%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_interfaces/srv/detail/dds_fastrtps/set_roi__type_support.cpp.o[0m
+[20.148s] [ 70%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_interfaces/srv/detail/set_pose__type_support.cpp.o[0m
+[20.703s] [ 70%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_interfaces/srv/detail/start_svo_rec__type_support.cpp.o[0m
+[20.720s] [ 71%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_interfaces/srv/detail/set_roi__type_support.cpp.o[0m
+[21.111s] [ 71%] [32m[1mLinking CXX shared library libzed_interfaces__rosidl_typesupport_fastrtps_cpp.so[0m
+[21.314s] [ 71%] Built target zed_interfaces__rosidl_typesupport_fastrtps_cpp
+[21.342s] [ 72%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[21.389s] [ 73%] [32m[1mLinking CXX shared library libzed_interfaces__rosidl_typesupport_introspection_cpp.so[0m
+[21.558s] [ 73%] Built target zed_interfaces__rosidl_typesupport_introspection_cpp
+[24.686s] [35m[1mScanning dependencies of target zed_interfaces__rosidl_typesupport_fastrtps_c[0m
+[24.772s] [ 74%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_interfaces/msg/detail/keypoint2_df__type_support_c.cpp.o[0m
+[24.773s] [ 76%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_interfaces/msg/detail/objects_stamped__type_support_c.cpp.o[0m
+[24.773s] [ 74%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_interfaces/msg/detail/bounding_box2_di__type_support_c.cpp.o[0m
+[24.773s] [ 76%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_interfaces/msg/detail/keypoint2_di__type_support_c.cpp.o[0m
+[24.773s] [ 76%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_interfaces/msg/detail/keypoint3_d__type_support_c.cpp.o[0m
+[24.773s] [ 76%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_interfaces/msg/detail/object__type_support_c.cpp.o[0m
+[25.540s] [ 77%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_interfaces/msg/detail/bounding_box2_df__type_support_c.cpp.o[0m
+[25.568s] [ 77%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_interfaces/msg/detail/bounding_box3_d__type_support_c.cpp.o[0m
+[25.582s] [ 78%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_interfaces/msg/detail/skeleton2_d__type_support_c.cpp.o[0m
+[25.599s] [ 79%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_interfaces/msg/detail/skeleton3_d__type_support_c.cpp.o[0m
+[25.655s] [ 79%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_interfaces/msg/detail/depth_info_stamped__type_support_c.cpp.o[0m
+[25.677s] [ 80%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_interfaces/msg/detail/plane_stamped__type_support_c.cpp.o[0m
+[26.325s] [ 80%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_interfaces/msg/detail/pos_track_status__type_support_c.cpp.o[0m
+[26.401s] [ 81%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_interfaces/msg/detail/gnss_fusion_status__type_support_c.cpp.o[0m
+[26.420s] [ 81%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_interfaces/msg/detail/heartbeat__type_support_c.cpp.o[0m
+[26.489s] [ 82%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_interfaces/msg/detail/mag_heading_status__type_support_c.cpp.o[0m
+[26.501s] [ 83%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_interfaces/srv/detail/set_pose__type_support_c.cpp.o[0m
+[26.512s] [ 83%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_interfaces/srv/detail/start_svo_rec__type_support_c.cpp.o[0m
+[27.123s] [ 84%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_interfaces/srv/detail/set_roi__type_support_c.cpp.o[0m
+[27.917s] [ 84%] [32m[1mLinking CXX shared library libzed_interfaces__rosidl_typesupport_fastrtps_c.so[0m
+[28.109s] [ 84%] Built target zed_interfaces__rosidl_typesupport_fastrtps_c
+[28.133s] [35m[1mScanning dependencies of target zed_interfaces[0m
+[28.159s] [ 84%] Built target zed_interfaces
+[28.186s] [35m[1mScanning dependencies of target zed_interfaces__py[0m
+[28.214s] [ 85%] [34m[1mGenerating Python code for ROS interfaces[0m
+[35.019s] [ 85%] Built target zed_interfaces__py
+[35.042s] [35m[1mScanning dependencies of target zed_interfaces__python[0m
+[35.147s] [ 86%] [32mBuilding C object CMakeFiles/zed_interfaces__python.dir/rosidl_generator_py/zed_interfaces/msg/_keypoint2_di_s.c.o[0m
+[35.147s] [ 87%] [32mBuilding C object CMakeFiles/zed_interfaces__python.dir/rosidl_generator_py/zed_interfaces/msg/_objects_stamped_s.c.o[0m
+[35.148s] [ 88%] [32mBuilding C object CMakeFiles/zed_interfaces__python.dir/rosidl_generator_py/zed_interfaces/msg/_keypoint3_d_s.c.o[0m
+[35.148s] [ 88%] [32mBuilding C object CMakeFiles/zed_interfaces__python.dir/rosidl_generator_py/zed_interfaces/msg/_keypoint2_df_s.c.o[0m
+[35.149s] [ 88%] [32mBuilding C object CMakeFiles/zed_interfaces__python.dir/rosidl_generator_py/zed_interfaces/msg/_object_s.c.o[0m
+[35.151s] [ 88%] [32mBuilding C object CMakeFiles/zed_interfaces__python.dir/rosidl_generator_py/zed_interfaces/msg/_bounding_box2_di_s.c.o[0m
+[35.352s] [ 88%] [32mBuilding C object CMakeFiles/zed_interfaces__python.dir/rosidl_generator_py/zed_interfaces/msg/_bounding_box3_d_s.c.o[0m
+[35.352s] [ 89%] [32mBuilding C object CMakeFiles/zed_interfaces__python.dir/rosidl_generator_py/zed_interfaces/msg/_bounding_box2_df_s.c.o[0m
+[35.366s] [ 90%] [32mBuilding C object CMakeFiles/zed_interfaces__python.dir/rosidl_generator_py/zed_interfaces/msg/_skeleton3_d_s.c.o[0m
+[35.367s] [ 90%] [32mBuilding C object CMakeFiles/zed_interfaces__python.dir/rosidl_generator_py/zed_interfaces/msg/_skeleton2_d_s.c.o[0m
+[35.367s] [ 91%] [32mBuilding C object CMakeFiles/zed_interfaces__python.dir/rosidl_generator_py/zed_interfaces/msg/_depth_info_stamped_s.c.o[0m
+[35.416s] [ 92%] [32mBuilding C object CMakeFiles/zed_interfaces__python.dir/rosidl_generator_py/zed_interfaces/msg/_plane_stamped_s.c.o[0m
+[35.562s] [ 92%] [32mBuilding C object CMakeFiles/zed_interfaces__python.dir/rosidl_generator_py/zed_interfaces/msg/_pos_track_status_s.c.o[0m
+[35.564s] [ 93%] [32mBuilding C object CMakeFiles/zed_interfaces__python.dir/rosidl_generator_py/zed_interfaces/msg/_mag_heading_status_s.c.o[0m
+[35.565s] [ 94%] [32mBuilding C object CMakeFiles/zed_interfaces__python.dir/rosidl_generator_py/zed_interfaces/msg/_gnss_fusion_status_s.c.o[0m
+[35.578s] [ 94%] [32mBuilding C object CMakeFiles/zed_interfaces__python.dir/rosidl_generator_py/zed_interfaces/msg/_heartbeat_s.c.o[0m
+[35.589s] [ 94%] [32mBuilding C object CMakeFiles/zed_interfaces__python.dir/rosidl_generator_py/zed_interfaces/srv/_set_pose_s.c.o[0m
+[35.672s] [ 95%] [32mBuilding C object CMakeFiles/zed_interfaces__python.dir/rosidl_generator_py/zed_interfaces/srv/_start_svo_rec_s.c.o[0m
+[35.769s] [ 96%] [32mBuilding C object CMakeFiles/zed_interfaces__python.dir/rosidl_generator_py/zed_interfaces/srv/_set_roi_s.c.o[0m
+[35.978s] [ 96%] [32m[1mLinking C shared library rosidl_generator_py/zed_interfaces/libzed_interfaces__python.so[0m
+[36.081s] [ 96%] Built target zed_interfaces__python
+[36.103s] [35m[1mScanning dependencies of target zed_interfaces__rosidl_typesupport_c__pyext[0m
+[36.103s] [35m[1mScanning dependencies of target zed_interfaces__rosidl_typesupport_introspection_c__pyext[0m
+[36.103s] [35m[1mScanning dependencies of target zed_interfaces__rosidl_typesupport_fastrtps_c__pyext[0m
+[36.148s] [ 98%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/zed_interfaces/_zed_interfaces_s.ep.rosidl_typesupport_c.c.o[0m
+[36.148s] [ 98%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/zed_interfaces/_zed_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[36.153s] [ 99%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/zed_interfaces/_zed_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[36.461s] [100%] [32m[1mLinking CXX shared library rosidl_generator_py/zed_interfaces/zed_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-38-aarch64-linux-gnu.so[0m
+[36.461s] [100%] [32m[1mLinking C shared library rosidl_generator_py/zed_interfaces/zed_interfaces_s__rosidl_typesupport_c.cpython-38-aarch64-linux-gnu.so[0m
+[36.462s] [100%] [32m[1mLinking C shared library rosidl_generator_py/zed_interfaces/zed_interfaces_s__rosidl_typesupport_introspection_c.cpython-38-aarch64-linux-gnu.so[0m
+[36.554s] [100%] Built target zed_interfaces__rosidl_typesupport_c__pyext
+[36.554s] [100%] Built target zed_interfaces__rosidl_typesupport_introspection_c__pyext
+[36.605s] [100%] Built target zed_interfaces__rosidl_typesupport_fastrtps_c__pyext
+[36.635s] Invoked command in '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/build/zed_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/build/zed_interfaces -- -j6 -l6
+[37.290s] Invoking command in '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/build/zed_interfaces': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/build/zed_interfaces
+[37.312s] -- Install configuration: ""
+[37.312s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/ament_index/resource_index/rosidl_interfaces/zed_interfaces
+[37.313s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces
+[37.313s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg
+[37.313s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/keypoint2_df.h
+[37.313s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/object.h
+[37.314s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/depth_info_stamped.h
+[37.314s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/gnss_fusion_status.h
+[37.314s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/plane_stamped.h
+[37.314s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/objects_stamped.h
+[37.314s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/keypoint3_d.h
+[37.315s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/keypoint2_di.h
+[37.315s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/bounding_box2_df.h
+[37.315s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/skeleton3_d.h
+[37.315s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail
+[37.315s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/keypoint2_df__type_support.h
+[37.316s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/object__functions.c
+[37.316s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/pos_track_status__functions.c
+[37.316s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/bounding_box2_di__struct.h
+[37.316s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/heartbeat__functions.h
+[37.316s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/pos_track_status__type_support.h
+[37.317s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/objects_stamped__functions.c
+[37.317s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/skeleton3_d__functions.c
+[37.317s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/bounding_box3_d__type_support.h
+[37.317s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/keypoint2_di__struct.h
+[37.317s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/plane_stamped__functions.c
+[37.318s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/plane_stamped__type_support.h
+[37.318s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/keypoint3_d__struct.h
+[37.318s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/keypoint2_df__functions.h
+[37.319s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/gnss_fusion_status__struct.h
+[37.319s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/object__struct.h
+[37.319s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/objects_stamped__struct.h
+[37.319s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/depth_info_stamped__struct.h
+[37.320s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/mag_heading_status__functions.h
+[37.320s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/skeleton3_d__functions.h
+[37.320s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/objects_stamped__functions.h
+[37.320s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/depth_info_stamped__functions.c
+[37.320s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/mag_heading_status__struct.h
+[37.321s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/bounding_box2_df__functions.c
+[37.321s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/bounding_box3_d__functions.h
+[37.321s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/keypoint2_df__functions.c
+[37.322s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/skeleton3_d__struct.h
+[37.322s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/heartbeat__type_support.h
+[37.322s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/pos_track_status__functions.h
+[37.322s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/plane_stamped__struct.h
+[37.323s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/skeleton2_d__type_support.h
+[37.323s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/heartbeat__struct.h
+[37.323s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/objects_stamped__type_support.h
+[37.323s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/gnss_fusion_status__functions.c
+[37.324s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/bounding_box3_d__functions.c
+[37.324s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/keypoint2_di__functions.c
+[37.324s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/bounding_box2_df__functions.h
+[37.324s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/bounding_box2_di__type_support.h
+[37.325s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/bounding_box2_di__functions.h
+[37.325s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/keypoint2_di__type_support.h
+[37.325s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/skeleton3_d__type_support.h
+[37.326s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/skeleton2_d__struct.h
+[37.326s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/heartbeat__functions.c
+[37.326s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/object__functions.h
+[37.327s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/depth_info_stamped__type_support.h
+[37.327s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/skeleton2_d__functions.c
+[37.327s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/bounding_box3_d__struct.h
+[37.327s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/mag_heading_status__functions.c
+[37.328s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/bounding_box2_di__functions.c
+[37.328s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/skeleton2_d__functions.h
+[37.328s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/gnss_fusion_status__functions.h
+[37.328s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/keypoint3_d__type_support.h
+[37.328s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/depth_info_stamped__functions.h
+[37.329s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/keypoint2_di__functions.h
+[37.329s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/keypoint2_df__struct.h
+[37.329s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/pos_track_status__struct.h
+[37.329s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/mag_heading_status__type_support.h
+[37.329s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/object__type_support.h
+[37.329s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/gnss_fusion_status__type_support.h
+[37.330s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/plane_stamped__functions.h
+[37.330s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/keypoint3_d__functions.h
+[37.330s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/bounding_box2_df__struct.h
+[37.330s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/bounding_box2_df__type_support.h
+[37.330s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/keypoint3_d__functions.c
+[37.330s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/skeleton2_d.h
+[37.331s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/mag_heading_status.h
+[37.331s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/heartbeat.h
+[37.331s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/rosidl_generator_c__visibility_control.h
+[37.331s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/bounding_box3_d.h
+[37.331s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/pos_track_status.h
+[37.332s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/bounding_box2_di.h
+[37.332s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/srv
+[37.332s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/srv/set_roi.h
+[37.332s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/srv/set_pose.h
+[37.332s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/srv/detail
+[37.332s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/srv/detail/set_roi__struct.h
+[37.333s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/srv/detail/set_pose__functions.h
+[37.333s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/srv/detail/start_svo_rec__type_support.h
+[37.333s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/srv/detail/start_svo_rec__struct.h
+[37.333s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/srv/detail/set_pose__functions.c
+[37.333s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/srv/detail/set_pose__type_support.h
+[37.334s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/srv/detail/start_svo_rec__functions.h
+[37.334s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/srv/detail/set_pose__struct.h
+[37.335s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/srv/detail/set_roi__functions.c
+[37.335s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/srv/detail/start_svo_rec__functions.c
+[37.335s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/srv/detail/set_roi__functions.h
+[37.335s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/srv/detail/set_roi__type_support.h
+[37.336s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/srv/start_svo_rec.h
+[37.336s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/zed_interfaces/environment/library_path.sh
+[37.337s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/zed_interfaces/environment/library_path.dsv
+[37.337s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/lib/libzed_interfaces__rosidl_generator_c.so
+[37.338s] -- Set runtime path of "/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/lib/libzed_interfaces__rosidl_generator_c.so" to ""
+[37.339s] -- Up-to-date: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces
+[37.339s] -- Up-to-date: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg
+[37.339s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[37.339s] -- Up-to-date: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail
+[37.340s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/gnss_fusion_status__rosidl_typesupport_fastrtps_c.h
+[37.340s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/mag_heading_status__rosidl_typesupport_fastrtps_c.h
+[37.340s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/bounding_box3_d__rosidl_typesupport_fastrtps_c.h
+[37.340s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/keypoint2_di__rosidl_typesupport_fastrtps_c.h
+[37.340s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/bounding_box2_di__rosidl_typesupport_fastrtps_c.h
+[37.340s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/keypoint3_d__rosidl_typesupport_fastrtps_c.h
+[37.342s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/skeleton2_d__rosidl_typesupport_fastrtps_c.h
+[37.342s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/objects_stamped__rosidl_typesupport_fastrtps_c.h
+[37.343s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/pos_track_status__rosidl_typesupport_fastrtps_c.h
+[37.343s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/object__rosidl_typesupport_fastrtps_c.h
+[37.343s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/keypoint2_df__rosidl_typesupport_fastrtps_c.h
+[37.343s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/skeleton3_d__rosidl_typesupport_fastrtps_c.h
+[37.343s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/depth_info_stamped__rosidl_typesupport_fastrtps_c.h
+[37.344s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/plane_stamped__rosidl_typesupport_fastrtps_c.h
+[37.344s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/heartbeat__rosidl_typesupport_fastrtps_c.h
+[37.344s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/bounding_box2_df__rosidl_typesupport_fastrtps_c.h
+[37.344s] -- Up-to-date: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/srv
+[37.344s] -- Up-to-date: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/srv/detail
+[37.345s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/srv/detail/start_svo_rec__rosidl_typesupport_fastrtps_c.h
+[37.345s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/srv/detail/set_roi__rosidl_typesupport_fastrtps_c.h
+[37.345s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/srv/detail/set_pose__rosidl_typesupport_fastrtps_c.h
+[37.345s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/lib/libzed_interfaces__rosidl_typesupport_fastrtps_c.so
+[37.346s] -- Set runtime path of "/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/lib/libzed_interfaces__rosidl_typesupport_fastrtps_c.so" to ""
+[37.346s] -- Up-to-date: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces
+[37.347s] -- Up-to-date: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg
+[37.347s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[37.347s] -- Up-to-date: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail
+[37.347s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/bounding_box2_di__rosidl_typesupport_fastrtps_cpp.hpp
+[37.347s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/keypoint2_di__rosidl_typesupport_fastrtps_cpp.hpp
+[37.348s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/objects_stamped__rosidl_typesupport_fastrtps_cpp.hpp
+[37.348s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/bounding_box3_d__rosidl_typesupport_fastrtps_cpp.hpp
+[37.348s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/keypoint3_d__rosidl_typesupport_fastrtps_cpp.hpp
+[37.348s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/depth_info_stamped__rosidl_typesupport_fastrtps_cpp.hpp
+[37.348s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/keypoint2_df__rosidl_typesupport_fastrtps_cpp.hpp
+[37.348s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/skeleton3_d__rosidl_typesupport_fastrtps_cpp.hpp
+[37.349s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/gnss_fusion_status__rosidl_typesupport_fastrtps_cpp.hpp
+[37.349s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/skeleton2_d__rosidl_typesupport_fastrtps_cpp.hpp
+[37.349s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/object__rosidl_typesupport_fastrtps_cpp.hpp
+[37.349s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/plane_stamped__rosidl_typesupport_fastrtps_cpp.hpp
+[37.349s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/dds_fastrtps
+[37.350s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/mag_heading_status__rosidl_typesupport_fastrtps_cpp.hpp
+[37.350s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/heartbeat__rosidl_typesupport_fastrtps_cpp.hpp
+[37.350s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/bounding_box2_df__rosidl_typesupport_fastrtps_cpp.hpp
+[37.351s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/pos_track_status__rosidl_typesupport_fastrtps_cpp.hpp
+[37.351s] -- Up-to-date: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/srv
+[37.351s] -- Up-to-date: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/srv/detail
+[37.351s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/srv/detail/start_svo_rec__rosidl_typesupport_fastrtps_cpp.hpp
+[37.351s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/srv/detail/set_roi__rosidl_typesupport_fastrtps_cpp.hpp
+[37.352s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/srv/detail/set_pose__rosidl_typesupport_fastrtps_cpp.hpp
+[37.352s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/srv/detail/dds_fastrtps
+[37.352s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/lib/libzed_interfaces__rosidl_typesupport_fastrtps_cpp.so
+[37.353s] -- Set runtime path of "/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/lib/libzed_interfaces__rosidl_typesupport_fastrtps_cpp.so" to ""
+[37.354s] -- Up-to-date: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces
+[37.354s] -- Up-to-date: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg
+[37.354s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[37.354s] -- Up-to-date: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail
+[37.354s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/pos_track_status__rosidl_typesupport_introspection_c.h
+[37.354s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/pos_track_status__type_support.c
+[37.355s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/skeleton3_d__type_support.c
+[37.355s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/objects_stamped__rosidl_typesupport_introspection_c.h
+[37.355s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/keypoint2_di__type_support.c
+[37.355s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/keypoint2_df__rosidl_typesupport_introspection_c.h
+[37.355s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/keypoint3_d__rosidl_typesupport_introspection_c.h
+[37.356s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/plane_stamped__rosidl_typesupport_introspection_c.h
+[37.356s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/object__rosidl_typesupport_introspection_c.h
+[37.356s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/keypoint3_d__type_support.c
+[37.356s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/skeleton2_d__rosidl_typesupport_introspection_c.h
+[37.356s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/bounding_box2_df__rosidl_typesupport_introspection_c.h
+[37.357s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/heartbeat__rosidl_typesupport_introspection_c.h
+[37.357s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/bounding_box2_di__rosidl_typesupport_introspection_c.h
+[37.357s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/bounding_box2_di__type_support.c
+[37.357s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/plane_stamped__type_support.c
+[37.358s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/depth_info_stamped__type_support.c
+[37.358s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/bounding_box2_df__type_support.c
+[37.358s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/mag_heading_status__rosidl_typesupport_introspection_c.h
+[37.358s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/object__type_support.c
+[37.358s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/keypoint2_di__rosidl_typesupport_introspection_c.h
+[37.359s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/bounding_box3_d__type_support.c
+[37.359s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/heartbeat__type_support.c
+[37.359s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/skeleton3_d__rosidl_typesupport_introspection_c.h
+[37.360s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/gnss_fusion_status__type_support.c
+[37.360s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/objects_stamped__type_support.c
+[37.360s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/gnss_fusion_status__rosidl_typesupport_introspection_c.h
+[37.361s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/mag_heading_status__type_support.c
+[37.361s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/depth_info_stamped__rosidl_typesupport_introspection_c.h
+[37.361s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/bounding_box3_d__rosidl_typesupport_introspection_c.h
+[37.361s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/skeleton2_d__type_support.c
+[37.362s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/keypoint2_df__type_support.c
+[37.362s] -- Up-to-date: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/srv
+[37.362s] -- Up-to-date: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/srv/detail
+[37.362s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/srv/detail/set_roi__rosidl_typesupport_introspection_c.h
+[37.362s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/srv/detail/set_pose__type_support.c
+[37.363s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/srv/detail/start_svo_rec__type_support.c
+[37.363s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/srv/detail/set_pose__rosidl_typesupport_introspection_c.h
+[37.363s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/srv/detail/set_roi__type_support.c
+[37.363s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/srv/detail/start_svo_rec__rosidl_typesupport_introspection_c.h
+[37.364s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/lib/libzed_interfaces__rosidl_typesupport_introspection_c.so
+[37.364s] -- Set runtime path of "/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/lib/libzed_interfaces__rosidl_typesupport_introspection_c.so" to ""
+[37.365s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/lib/libzed_interfaces__rosidl_typesupport_c.so
+[37.365s] -- Set runtime path of "/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/lib/libzed_interfaces__rosidl_typesupport_c.so" to ""
+[37.366s] -- Up-to-date: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces
+[37.366s] -- Up-to-date: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg
+[37.366s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/keypoint3_d.hpp
+[37.366s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/gnss_fusion_status.hpp
+[37.366s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/skeleton2_d.hpp
+[37.366s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/depth_info_stamped.hpp
+[37.367s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
+[37.367s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/bounding_box2_df.hpp
+[37.367s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/mag_heading_status.hpp
+[37.367s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/heartbeat.hpp
+[37.368s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/skeleton3_d.hpp
+[37.368s] -- Up-to-date: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail
+[37.368s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/keypoint3_d__builder.hpp
+[37.368s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/depth_info_stamped__struct.hpp
+[37.369s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/bounding_box2_df__builder.hpp
+[37.369s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/depth_info_stamped__type_support.hpp
+[37.369s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/skeleton2_d__builder.hpp
+[37.369s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/mag_heading_status__type_support.hpp
+[37.369s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/depth_info_stamped__builder.hpp
+[37.370s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/object__builder.hpp
+[37.371s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/skeleton2_d__traits.hpp
+[37.371s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/mag_heading_status__struct.hpp
+[37.371s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/pos_track_status__traits.hpp
+[37.371s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/object__type_support.hpp
+[37.371s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/keypoint3_d__traits.hpp
+[37.372s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/depth_info_stamped__traits.hpp
+[37.372s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/mag_heading_status__builder.hpp
+[37.372s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/keypoint2_di__builder.hpp
+[37.372s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/heartbeat__builder.hpp
+[37.372s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/objects_stamped__type_support.hpp
+[37.373s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/plane_stamped__struct.hpp
+[37.373s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/objects_stamped__struct.hpp
+[37.373s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/keypoint2_df__traits.hpp
+[37.373s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/bounding_box2_df__type_support.hpp
+[37.373s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/objects_stamped__traits.hpp
+[37.373s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/plane_stamped__traits.hpp
+[37.374s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/bounding_box3_d__type_support.hpp
+[37.374s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/keypoint3_d__struct.hpp
+[37.374s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/mag_heading_status__traits.hpp
+[37.374s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/bounding_box2_df__traits.hpp
+[37.375s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/skeleton3_d__struct.hpp
+[37.375s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/skeleton2_d__type_support.hpp
+[37.375s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/keypoint2_df__struct.hpp
+[37.375s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/skeleton3_d__builder.hpp
+[37.375s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/pos_track_status__type_support.hpp
+[37.376s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/keypoint3_d__type_support.hpp
+[37.376s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/bounding_box3_d__struct.hpp
+[37.376s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/pos_track_status__builder.hpp
+[37.376s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/objects_stamped__builder.hpp
+[37.377s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/keypoint2_di__type_support.hpp
+[37.377s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/keypoint2_df__builder.hpp
+[37.377s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/bounding_box3_d__builder.hpp
+[37.377s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/bounding_box2_di__traits.hpp
+[37.377s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/heartbeat__struct.hpp
+[37.378s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/object__struct.hpp
+[37.378s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/bounding_box2_di__struct.hpp
+[37.378s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/plane_stamped__builder.hpp
+[37.378s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/keypoint2_di__struct.hpp
+[37.379s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/heartbeat__type_support.hpp
+[37.379s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/pos_track_status__struct.hpp
+[37.379s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/gnss_fusion_status__builder.hpp
+[37.379s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/bounding_box2_di__builder.hpp
+[37.379s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/keypoint2_di__traits.hpp
+[37.380s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/plane_stamped__type_support.hpp
+[37.380s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/gnss_fusion_status__traits.hpp
+[37.380s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/gnss_fusion_status__type_support.hpp
+[37.380s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/skeleton2_d__struct.hpp
+[37.380s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/bounding_box2_di__type_support.hpp
+[37.381s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/bounding_box2_df__struct.hpp
+[37.381s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/heartbeat__traits.hpp
+[37.381s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/keypoint2_df__type_support.hpp
+[37.381s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/skeleton3_d__type_support.hpp
+[37.382s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/gnss_fusion_status__struct.hpp
+[37.382s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/object__traits.hpp
+[37.382s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/bounding_box3_d__traits.hpp
+[37.382s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/skeleton3_d__traits.hpp
+[37.383s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/keypoint2_df.hpp
+[37.383s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/bounding_box2_di.hpp
+[37.383s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/objects_stamped.hpp
+[37.383s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/plane_stamped.hpp
+[37.383s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/object.hpp
+[37.384s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/pos_track_status.hpp
+[37.384s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/bounding_box3_d.hpp
+[37.384s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/keypoint2_di.hpp
+[37.384s] -- Up-to-date: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/srv
+[37.384s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/srv/set_pose.hpp
+[37.384s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/srv/start_svo_rec.hpp
+[37.385s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/srv/set_roi.hpp
+[37.385s] -- Up-to-date: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/srv/detail
+[37.385s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/srv/detail/start_svo_rec__struct.hpp
+[37.385s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/srv/detail/set_pose__builder.hpp
+[37.385s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/srv/detail/set_pose__type_support.hpp
+[37.386s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/srv/detail/set_roi__traits.hpp
+[37.386s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/srv/detail/start_svo_rec__type_support.hpp
+[37.386s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/srv/detail/start_svo_rec__builder.hpp
+[37.386s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/srv/detail/set_roi__type_support.hpp
+[37.387s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/srv/detail/set_pose__traits.hpp
+[37.387s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/srv/detail/set_pose__struct.hpp
+[37.387s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/srv/detail/set_roi__builder.hpp
+[37.387s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/srv/detail/set_roi__struct.hpp
+[37.388s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/srv/detail/start_svo_rec__traits.hpp
+[37.388s] -- Up-to-date: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces
+[37.388s] -- Up-to-date: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg
+[37.388s] -- Up-to-date: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail
+[37.389s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/mag_heading_status__type_support.cpp
+[37.389s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/keypoint2_di__type_support.cpp
+[37.389s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/keypoint3_d__rosidl_typesupport_introspection_cpp.hpp
+[37.389s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/bounding_box2_di__rosidl_typesupport_introspection_cpp.hpp
+[37.389s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/bounding_box2_di__type_support.cpp
+[37.389s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/keypoint3_d__type_support.cpp
+[37.390s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/objects_stamped__type_support.cpp
+[37.390s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/keypoint2_df__type_support.cpp
+[37.390s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/gnss_fusion_status__type_support.cpp
+[37.391s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/pos_track_status__type_support.cpp
+[37.391s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/keypoint2_di__rosidl_typesupport_introspection_cpp.hpp
+[37.391s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/skeleton3_d__rosidl_typesupport_introspection_cpp.hpp
+[37.391s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/mag_heading_status__rosidl_typesupport_introspection_cpp.hpp
+[37.391s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/depth_info_stamped__rosidl_typesupport_introspection_cpp.hpp
+[37.392s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/bounding_box2_df__type_support.cpp
+[37.392s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/gnss_fusion_status__rosidl_typesupport_introspection_cpp.hpp
+[37.392s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/bounding_box3_d__rosidl_typesupport_introspection_cpp.hpp
+[37.392s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/heartbeat__type_support.cpp
+[37.392s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/keypoint2_df__rosidl_typesupport_introspection_cpp.hpp
+[37.393s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/skeleton3_d__type_support.cpp
+[37.393s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/bounding_box2_df__rosidl_typesupport_introspection_cpp.hpp
+[37.393s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/depth_info_stamped__type_support.cpp
+[37.393s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/plane_stamped__type_support.cpp
+[37.394s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/object__rosidl_typesupport_introspection_cpp.hpp
+[37.394s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/skeleton2_d__type_support.cpp
+[37.394s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/objects_stamped__rosidl_typesupport_introspection_cpp.hpp
+[37.394s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/pos_track_status__rosidl_typesupport_introspection_cpp.hpp
+[37.395s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/bounding_box3_d__type_support.cpp
+[37.395s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/plane_stamped__rosidl_typesupport_introspection_cpp.hpp
+[37.395s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/skeleton2_d__rosidl_typesupport_introspection_cpp.hpp
+[37.395s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/object__type_support.cpp
+[37.395s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/msg/detail/heartbeat__rosidl_typesupport_introspection_cpp.hpp
+[37.396s] -- Up-to-date: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/srv
+[37.396s] -- Up-to-date: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/srv/detail
+[37.396s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/srv/detail/set_pose__type_support.cpp
+[37.396s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/srv/detail/start_svo_rec__type_support.cpp
+[37.396s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/srv/detail/set_pose__rosidl_typesupport_introspection_cpp.hpp
+[37.396s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/srv/detail/start_svo_rec__rosidl_typesupport_introspection_cpp.hpp
+[37.397s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/srv/detail/set_roi__type_support.cpp
+[37.397s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/include/zed_interfaces/srv/detail/set_roi__rosidl_typesupport_introspection_cpp.hpp
+[37.397s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/lib/libzed_interfaces__rosidl_typesupport_introspection_cpp.so
+[37.399s] -- Set runtime path of "/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/lib/libzed_interfaces__rosidl_typesupport_introspection_cpp.so" to ""
+[37.399s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/lib/libzed_interfaces__rosidl_typesupport_cpp.so
+[37.400s] -- Set runtime path of "/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/lib/libzed_interfaces__rosidl_typesupport_cpp.so" to ""
+[37.400s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/zed_interfaces/environment/pythonpath.sh
+[37.400s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/zed_interfaces/environment/pythonpath.dsv
+[37.401s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/lib/python3.8/site-packages/zed_interfaces/__init__.py
+[37.463s] Compiling '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/lib/python3.8/site-packages/zed_interfaces/__init__.py'...
+[37.474s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/lib/python3.8/site-packages/zed_interfaces/msg
+[37.474s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/lib/python3.8/site-packages/zed_interfaces/msg/_keypoint2_df_s.c
+[37.474s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/lib/python3.8/site-packages/zed_interfaces/msg/_skeleton3_d_s.c
+[37.475s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/lib/python3.8/site-packages/zed_interfaces/msg/_plane_stamped_s.c
+[37.475s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/lib/python3.8/site-packages/zed_interfaces/msg/__init__.py
+[37.475s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/lib/python3.8/site-packages/zed_interfaces/msg/_mag_heading_status.py
+[37.475s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/lib/python3.8/site-packages/zed_interfaces/msg/_plane_stamped.py
+[37.476s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/lib/python3.8/site-packages/zed_interfaces/msg/_depth_info_stamped_s.c
+[37.476s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/lib/python3.8/site-packages/zed_interfaces/msg/_keypoint3_d.py
+[37.476s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/lib/python3.8/site-packages/zed_interfaces/msg/_bounding_box2_df.py
+[37.476s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/lib/python3.8/site-packages/zed_interfaces/msg/_skeleton3_d.py
+[37.476s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/lib/python3.8/site-packages/zed_interfaces/msg/_pos_track_status_s.c
+[37.477s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/lib/python3.8/site-packages/zed_interfaces/msg/_depth_info_stamped.py
+[37.477s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/lib/python3.8/site-packages/zed_interfaces/msg/_gnss_fusion_status.py
+[37.477s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/lib/python3.8/site-packages/zed_interfaces/msg/_keypoint2_df.py
+[37.477s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/lib/python3.8/site-packages/zed_interfaces/msg/_gnss_fusion_status_s.c
+[37.478s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/lib/python3.8/site-packages/zed_interfaces/msg/_bounding_box2_di.py
+[37.478s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/lib/python3.8/site-packages/zed_interfaces/msg/_objects_stamped_s.c
+[37.478s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/lib/python3.8/site-packages/zed_interfaces/msg/_keypoint2_di.py
+[37.478s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/lib/python3.8/site-packages/zed_interfaces/msg/_bounding_box2_di_s.c
+[37.478s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/lib/python3.8/site-packages/zed_interfaces/msg/_pos_track_status.py
+[37.479s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/lib/python3.8/site-packages/zed_interfaces/msg/_keypoint3_d_s.c
+[37.479s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/lib/python3.8/site-packages/zed_interfaces/msg/_object_s.c
+[37.479s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/lib/python3.8/site-packages/zed_interfaces/msg/_mag_heading_status_s.c
+[37.479s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/lib/python3.8/site-packages/zed_interfaces/msg/_bounding_box2_df_s.c
+[37.479s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/lib/python3.8/site-packages/zed_interfaces/msg/_object.py
+[37.480s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/lib/python3.8/site-packages/zed_interfaces/msg/_skeleton2_d_s.c
+[37.480s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/lib/python3.8/site-packages/zed_interfaces/msg/_heartbeat.py
+[37.480s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/lib/python3.8/site-packages/zed_interfaces/msg/_objects_stamped.py
+[37.480s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/lib/python3.8/site-packages/zed_interfaces/msg/_bounding_box3_d_s.c
+[37.480s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/lib/python3.8/site-packages/zed_interfaces/msg/_bounding_box3_d.py
+[37.481s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/lib/python3.8/site-packages/zed_interfaces/msg/_heartbeat_s.c
+[37.481s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/lib/python3.8/site-packages/zed_interfaces/msg/_keypoint2_di_s.c
+[37.481s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/lib/python3.8/site-packages/zed_interfaces/msg/_skeleton2_d.py
+[37.482s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/lib/python3.8/site-packages/zed_interfaces/srv
+[37.482s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/lib/python3.8/site-packages/zed_interfaces/srv/_start_svo_rec.py
+[37.482s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/lib/python3.8/site-packages/zed_interfaces/srv/_set_roi_s.c
+[37.482s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/lib/python3.8/site-packages/zed_interfaces/srv/__init__.py
+[37.482s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/lib/python3.8/site-packages/zed_interfaces/srv/_set_pose.py
+[37.483s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/lib/python3.8/site-packages/zed_interfaces/srv/_start_svo_rec_s.c
+[37.483s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/lib/python3.8/site-packages/zed_interfaces/srv/_set_pose_s.c
+[37.483s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/lib/python3.8/site-packages/zed_interfaces/srv/_set_roi.py
+[37.484s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/lib/python3.8/site-packages/zed_interfaces/zed_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-38-aarch64-linux-gnu.so
+[37.485s] -- Set runtime path of "/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/lib/python3.8/site-packages/zed_interfaces/zed_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-38-aarch64-linux-gnu.so" to ""
+[37.485s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/lib/python3.8/site-packages/zed_interfaces/zed_interfaces_s__rosidl_typesupport_introspection_c.cpython-38-aarch64-linux-gnu.so
+[37.487s] -- Set runtime path of "/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/lib/python3.8/site-packages/zed_interfaces/zed_interfaces_s__rosidl_typesupport_introspection_c.cpython-38-aarch64-linux-gnu.so" to ""
+[37.487s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/lib/python3.8/site-packages/zed_interfaces/zed_interfaces_s__rosidl_typesupport_c.cpython-38-aarch64-linux-gnu.so
+[37.488s] -- Set runtime path of "/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/lib/python3.8/site-packages/zed_interfaces/zed_interfaces_s__rosidl_typesupport_c.cpython-38-aarch64-linux-gnu.so" to ""
+[37.488s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/lib/libzed_interfaces__python.so
+[37.489s] -- Set runtime path of "/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/lib/libzed_interfaces__python.so" to ""
+[37.489s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/zed_interfaces/msg/Object.idl
+[37.490s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/zed_interfaces/msg/ObjectsStamped.idl
+[37.490s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/zed_interfaces/msg/Keypoint2Di.idl
+[37.490s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/zed_interfaces/msg/Keypoint2Df.idl
+[37.491s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/zed_interfaces/msg/Keypoint3D.idl
+[37.491s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/zed_interfaces/msg/BoundingBox2Di.idl
+[37.491s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/zed_interfaces/msg/BoundingBox2Df.idl
+[37.492s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/zed_interfaces/msg/BoundingBox3D.idl
+[37.492s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/zed_interfaces/msg/Skeleton2D.idl
+[37.492s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/zed_interfaces/msg/Skeleton3D.idl
+[37.493s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/zed_interfaces/msg/DepthInfoStamped.idl
+[37.493s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/zed_interfaces/msg/PlaneStamped.idl
+[37.493s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/zed_interfaces/msg/PosTrackStatus.idl
+[37.494s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/zed_interfaces/msg/GnssFusionStatus.idl
+[37.494s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/zed_interfaces/msg/Heartbeat.idl
+[37.494s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/zed_interfaces/msg/MagHeadingStatus.idl
+[37.495s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/zed_interfaces/srv/SetPose.idl
+[37.495s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/zed_interfaces/srv/StartSvoRec.idl
+[37.495s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/zed_interfaces/srv/SetROI.idl
+[37.496s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/zed_interfaces/msg/Object.msg
+[37.496s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/zed_interfaces/msg/ObjectsStamped.msg
+[37.496s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/zed_interfaces/msg/Keypoint2Di.msg
+[37.497s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/zed_interfaces/msg/Keypoint2Df.msg
+[37.497s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/zed_interfaces/msg/Keypoint3D.msg
+[37.497s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/zed_interfaces/msg/BoundingBox2Di.msg
+[37.498s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/zed_interfaces/msg/BoundingBox2Df.msg
+[37.498s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/zed_interfaces/msg/BoundingBox3D.msg
+[37.498s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/zed_interfaces/msg/Skeleton2D.msg
+[37.499s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/zed_interfaces/msg/Skeleton3D.msg
+[37.499s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/zed_interfaces/msg/DepthInfoStamped.msg
+[37.499s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/zed_interfaces/msg/PlaneStamped.msg
+[37.499s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/zed_interfaces/msg/PosTrackStatus.msg
+[37.500s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/zed_interfaces/msg/GnssFusionStatus.msg
+[37.500s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/zed_interfaces/msg/Heartbeat.msg
+[37.500s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/zed_interfaces/msg/MagHeadingStatus.msg
+[37.501s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/zed_interfaces/srv/SetPose.srv
+[37.501s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/zed_interfaces/srv/SetPose_Request.msg
+[37.501s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/zed_interfaces/srv/SetPose_Response.msg
+[37.502s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/zed_interfaces/srv/StartSvoRec.srv
+[37.502s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/zed_interfaces/srv/StartSvoRec_Request.msg
+[37.502s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/zed_interfaces/srv/StartSvoRec_Response.msg
+[37.503s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/zed_interfaces/srv/SetROI.srv
+[37.503s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/zed_interfaces/srv/SetROI_Request.msg
+[37.503s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/zed_interfaces/srv/SetROI_Response.msg
+[37.504s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/zed_interfaces/meshes
+[37.504s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/zed_interfaces/meshes/zedx.stl
+[37.538s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/zed_interfaces/meshes/zedm.stl
+[37.538s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/zed_interfaces/meshes/zedxm.stl
+[37.568s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/zed_interfaces/meshes/zed2.stl
+[37.568s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/zed_interfaces/meshes/zed2i.stl
+[37.571s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/zed_interfaces/meshes/zed.stl
+[37.571s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/ament_index/resource_index/package_run_dependencies/zed_interfaces
+[37.572s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/ament_index/resource_index/parent_prefix_path/zed_interfaces
+[37.573s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/zed_interfaces/environment/ament_prefix_path.sh
+[37.573s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/zed_interfaces/environment/ament_prefix_path.dsv
+[37.574s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/zed_interfaces/environment/path.sh
+[37.574s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/zed_interfaces/environment/path.dsv
+[37.574s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/zed_interfaces/local_setup.bash
+[37.574s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/zed_interfaces/local_setup.sh
+[37.575s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/zed_interfaces/local_setup.zsh
+[37.575s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/zed_interfaces/local_setup.dsv
+[37.575s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/zed_interfaces/package.dsv
+[37.576s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/ament_index/resource_index/packages/zed_interfaces
+[37.576s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/zed_interfaces/cmake/zed_interfaces__rosidl_generator_cExport.cmake
+[37.576s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/zed_interfaces/cmake/zed_interfaces__rosidl_generator_cExport-noconfig.cmake
+[37.577s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/zed_interfaces/cmake/zed_interfaces__rosidl_typesupport_introspection_cExport.cmake
+[37.577s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/zed_interfaces/cmake/zed_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[37.578s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/zed_interfaces/cmake/zed_interfaces__rosidl_typesupport_cExport.cmake
+[37.578s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/zed_interfaces/cmake/zed_interfaces__rosidl_typesupport_cExport-noconfig.cmake
+[37.578s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/zed_interfaces/cmake/zed_interfaces__rosidl_generator_cppExport.cmake
+[37.579s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/zed_interfaces/cmake/zed_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+[37.579s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/zed_interfaces/cmake/zed_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[37.580s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/zed_interfaces/cmake/zed_interfaces__rosidl_typesupport_cppExport.cmake
+[37.580s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/zed_interfaces/cmake/zed_interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+[37.580s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/zed_interfaces/cmake/rosidl_cmake-extras.cmake
+[37.581s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/zed_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[37.581s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/zed_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[37.581s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/zed_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+[37.582s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/zed_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[37.583s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/zed_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[37.583s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/zed_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[37.583s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/zed_interfaces/cmake/zed_interfacesConfig.cmake
+[37.583s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/zed_interfaces/cmake/zed_interfacesConfig-version.cmake
+[37.584s] -- Installing: /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/install/zed_interfaces/share/zed_interfaces/package.xml
+[37.591s] Invoked command in '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/build/zed_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/build/zed_interfaces

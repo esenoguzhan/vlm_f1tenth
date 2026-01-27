@@ -1,0 +1,390 @@
+[5.440s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[5.440s] DEBUG:colcon:Parsed command line arguments: Namespace(allow_overriding=[], ament_cmake_args=None, base_paths=['.'], build_base='build', catkin_cmake_args=None, catkin_skip_building_tests=False, cmake_args=None, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, cmake_target=None, cmake_target_skip_unavailable=False, continue_on_error=False, event_handlers=None, executor='parallel', ignore_user_meta=False, install_base='install', log_base=None, log_level=None, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0xffff9389a670>>, merge_install=False, metas=['./colcon.meta'], packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_end=None, packages_ignore=None, packages_ignore_regex=None, packages_select=None, packages_select_build_failed=False, packages_select_by_dep=None, packages_select_regex=None, packages_select_test_failures=False, packages_skip=None, packages_skip_build_finished=False, packages_skip_by_dep=None, packages_skip_regex=None, packages_skip_test_passed=False, packages_skip_up_to=None, packages_start=None, packages_up_to=None, packages_up_to_regex=None, parallel_workers=6, paths=None, symlink_install=False, test_result_base=None, verb_extension=<colcon_core.verb.build.BuildVerb object at 0xffff9389a670>, verb_name='build', verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0xffff93223c70>)
+[5.675s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[5.675s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[5.675s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[5.675s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[5.675s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[5.675s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[5.676s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7'
+[5.676s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[5.676s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[5.676s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[5.676s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[5.676s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[5.676s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[5.677s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[5.677s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[5.677s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[5.705s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[5.705s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[5.705s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[5.705s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[5.705s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[5.706s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[5.706s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[5.706s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[5.706s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[5.706s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[5.707s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[5.707s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[5.707s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[5.707s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[5.707s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[5.707s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[5.708s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[5.708s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[5.708s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[5.708s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[5.708s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[5.708s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[5.708s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[5.708s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[5.708s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[5.708s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[5.708s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[5.709s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[5.709s] Level 1:colcon.colcon_core.package_identification:_identify(src/docker) by extensions ['ignore', 'ignore_ament_install']
+[5.709s] Level 1:colcon.colcon_core.package_identification:_identify(src/docker) by extension 'ignore'
+[5.709s] Level 1:colcon.colcon_core.package_identification:_identify(src/docker) by extension 'ignore_ament_install'
+[5.709s] Level 1:colcon.colcon_core.package_identification:_identify(src/docker) by extensions ['colcon_pkg']
+[5.709s] Level 1:colcon.colcon_core.package_identification:_identify(src/docker) by extension 'colcon_pkg'
+[5.709s] Level 1:colcon.colcon_core.package_identification:_identify(src/docker) by extensions ['colcon_meta']
+[5.709s] Level 1:colcon.colcon_core.package_identification:_identify(src/docker) by extension 'colcon_meta'
+[5.709s] Level 1:colcon.colcon_core.package_identification:_identify(src/docker) by extensions ['ros']
+[5.710s] Level 1:colcon.colcon_core.package_identification:_identify(src/docker) by extension 'ros'
+[5.710s] Level 1:colcon.colcon_core.package_identification:_identify(src/docker) by extensions ['cmake', 'python']
+[5.710s] Level 1:colcon.colcon_core.package_identification:_identify(src/docker) by extension 'cmake'
+[5.710s] Level 1:colcon.colcon_core.package_identification:_identify(src/docker) by extension 'python'
+[5.710s] Level 1:colcon.colcon_core.package_identification:_identify(src/docker) by extensions ['python_setup_py']
+[5.710s] Level 1:colcon.colcon_core.package_identification:_identify(src/docker) by extension 'python_setup_py'
+[5.710s] Level 1:colcon.colcon_core.package_identification:_identify(src/images) by extensions ['ignore', 'ignore_ament_install']
+[5.710s] Level 1:colcon.colcon_core.package_identification:_identify(src/images) by extension 'ignore'
+[5.711s] Level 1:colcon.colcon_core.package_identification:_identify(src/images) by extension 'ignore_ament_install'
+[5.711s] Level 1:colcon.colcon_core.package_identification:_identify(src/images) by extensions ['colcon_pkg']
+[5.711s] Level 1:colcon.colcon_core.package_identification:_identify(src/images) by extension 'colcon_pkg'
+[5.711s] Level 1:colcon.colcon_core.package_identification:_identify(src/images) by extensions ['colcon_meta']
+[5.711s] Level 1:colcon.colcon_core.package_identification:_identify(src/images) by extension 'colcon_meta'
+[5.711s] Level 1:colcon.colcon_core.package_identification:_identify(src/images) by extensions ['ros']
+[5.711s] Level 1:colcon.colcon_core.package_identification:_identify(src/images) by extension 'ros'
+[5.711s] Level 1:colcon.colcon_core.package_identification:_identify(src/images) by extensions ['cmake', 'python']
+[5.711s] Level 1:colcon.colcon_core.package_identification:_identify(src/images) by extension 'cmake'
+[5.711s] Level 1:colcon.colcon_core.package_identification:_identify(src/images) by extension 'python'
+[5.711s] Level 1:colcon.colcon_core.package_identification:_identify(src/images) by extensions ['python_setup_py']
+[5.712s] Level 1:colcon.colcon_core.package_identification:_identify(src/images) by extension 'python_setup_py'
+[5.712s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-interfaces) by extensions ['ignore', 'ignore_ament_install']
+[5.712s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-interfaces) by extension 'ignore'
+[5.712s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-interfaces) by extension 'ignore_ament_install'
+[5.712s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-interfaces) by extensions ['colcon_pkg']
+[5.712s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-interfaces) by extension 'colcon_pkg'
+[5.712s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-interfaces) by extensions ['colcon_meta']
+[5.712s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-interfaces) by extension 'colcon_meta'
+[5.712s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-interfaces) by extensions ['ros']
+[5.712s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed-ros2-interfaces) by extension 'ros'
+[5.718s] DEBUG:colcon.colcon_core.package_identification:Package 'src/zed-ros2-interfaces' with type 'ros.ament_cmake' and name 'zed_interfaces'
+[5.718s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed_components) by extensions ['ignore', 'ignore_ament_install']
+[5.718s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed_components) by extension 'ignore'
+[5.719s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed_components) by extension 'ignore_ament_install'
+[5.719s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed_components) by extensions ['colcon_pkg']
+[5.719s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed_components) by extension 'colcon_pkg'
+[5.719s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed_components) by extensions ['colcon_meta']
+[5.719s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed_components) by extension 'colcon_meta'
+[5.719s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed_components) by extensions ['ros']
+[5.719s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed_components) by extension 'ros'
+[5.721s] DEBUG:colcon.colcon_core.package_identification:Package 'src/zed_components' with type 'ros.ament_cmake' and name 'zed_components'
+[5.721s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed_ros2) by extensions ['ignore', 'ignore_ament_install']
+[5.722s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed_ros2) by extension 'ignore'
+[5.722s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed_ros2) by extension 'ignore_ament_install'
+[5.722s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed_ros2) by extensions ['colcon_pkg']
+[5.722s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed_ros2) by extension 'colcon_pkg'
+[5.722s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed_ros2) by extensions ['colcon_meta']
+[5.722s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed_ros2) by extension 'colcon_meta'
+[5.722s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed_ros2) by extensions ['ros']
+[5.722s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed_ros2) by extension 'ros'
+[5.724s] DEBUG:colcon.colcon_core.package_identification:Package 'src/zed_ros2' with type 'ros.ament_cmake' and name 'zed_ros2'
+[5.724s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed_wrapper) by extensions ['ignore', 'ignore_ament_install']
+[5.724s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed_wrapper) by extension 'ignore'
+[5.724s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed_wrapper) by extension 'ignore_ament_install'
+[5.724s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed_wrapper) by extensions ['colcon_pkg']
+[5.724s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed_wrapper) by extension 'colcon_pkg'
+[5.724s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed_wrapper) by extensions ['colcon_meta']
+[5.725s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed_wrapper) by extension 'colcon_meta'
+[5.725s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed_wrapper) by extensions ['ros']
+[5.725s] Level 1:colcon.colcon_core.package_identification:_identify(src/zed_wrapper) by extension 'ros'
+[5.726s] DEBUG:colcon.colcon_core.package_identification:Package 'src/zed_wrapper' with type 'ros.ament_cmake' and name 'zed_wrapper'
+[5.726s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[5.726s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[5.726s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[5.726s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[5.726s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[5.895s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[5.895s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[5.950s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 309 installed packages in /opt/ros/foxy
+[5.953s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[6.201s] Level 5:colcon.colcon_core.verb:set package 'zed_interfaces' build argument 'cmake_args' from command line to 'None'
+[6.201s] Level 5:colcon.colcon_core.verb:set package 'zed_interfaces' build argument 'cmake_target' from command line to 'None'
+[6.201s] Level 5:colcon.colcon_core.verb:set package 'zed_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[6.201s] Level 5:colcon.colcon_core.verb:set package 'zed_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[6.201s] Level 5:colcon.colcon_core.verb:set package 'zed_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[6.201s] Level 5:colcon.colcon_core.verb:set package 'zed_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[6.201s] Level 5:colcon.colcon_core.verb:set package 'zed_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[6.201s] Level 5:colcon.colcon_core.verb:set package 'zed_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[6.202s] Level 5:colcon.colcon_core.verb:set package 'zed_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[6.202s] DEBUG:colcon.colcon_core.verb:Building package 'zed_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/build/zed_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces', 'merge_install': False, 'path': '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/zed-ros2-interfaces', 'symlink_install': False, 'test_result_base': None}
+[6.230s] Level 5:colcon.colcon_core.verb:set package 'zed_components' build argument 'cmake_args' from command line to 'None'
+[6.230s] Level 5:colcon.colcon_core.verb:set package 'zed_components' build argument 'cmake_target' from command line to 'None'
+[6.230s] Level 5:colcon.colcon_core.verb:set package 'zed_components' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[6.230s] Level 5:colcon.colcon_core.verb:set package 'zed_components' build argument 'cmake_clean_cache' from command line to 'False'
+[6.230s] Level 5:colcon.colcon_core.verb:set package 'zed_components' build argument 'cmake_clean_first' from command line to 'False'
+[6.230s] Level 5:colcon.colcon_core.verb:set package 'zed_components' build argument 'cmake_force_configure' from command line to 'False'
+[6.230s] Level 5:colcon.colcon_core.verb:set package 'zed_components' build argument 'ament_cmake_args' from command line to 'None'
+[6.230s] Level 5:colcon.colcon_core.verb:set package 'zed_components' build argument 'catkin_cmake_args' from command line to 'None'
+[6.230s] Level 5:colcon.colcon_core.verb:set package 'zed_components' build argument 'catkin_skip_building_tests' from command line to 'False'
+[6.231s] DEBUG:colcon.colcon_core.verb:Building package 'zed_components' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/build/zed_components', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components', 'merge_install': False, 'path': '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/zed_components', 'symlink_install': False, 'test_result_base': None}
+[6.256s] Level 5:colcon.colcon_core.verb:set package 'zed_wrapper' build argument 'cmake_args' from command line to 'None'
+[6.256s] Level 5:colcon.colcon_core.verb:set package 'zed_wrapper' build argument 'cmake_target' from command line to 'None'
+[6.257s] Level 5:colcon.colcon_core.verb:set package 'zed_wrapper' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[6.257s] Level 5:colcon.colcon_core.verb:set package 'zed_wrapper' build argument 'cmake_clean_cache' from command line to 'False'
+[6.257s] Level 5:colcon.colcon_core.verb:set package 'zed_wrapper' build argument 'cmake_clean_first' from command line to 'False'
+[6.257s] Level 5:colcon.colcon_core.verb:set package 'zed_wrapper' build argument 'cmake_force_configure' from command line to 'False'
+[6.257s] Level 5:colcon.colcon_core.verb:set package 'zed_wrapper' build argument 'ament_cmake_args' from command line to 'None'
+[6.257s] Level 5:colcon.colcon_core.verb:set package 'zed_wrapper' build argument 'catkin_cmake_args' from command line to 'None'
+[6.257s] Level 5:colcon.colcon_core.verb:set package 'zed_wrapper' build argument 'catkin_skip_building_tests' from command line to 'False'
+[6.257s] DEBUG:colcon.colcon_core.verb:Building package 'zed_wrapper' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/build/zed_wrapper', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper', 'merge_install': False, 'path': '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/zed_wrapper', 'symlink_install': False, 'test_result_base': None}
+[6.282s] Level 5:colcon.colcon_core.verb:set package 'zed_ros2' build argument 'cmake_args' from command line to 'None'
+[6.283s] Level 5:colcon.colcon_core.verb:set package 'zed_ros2' build argument 'cmake_target' from command line to 'None'
+[6.283s] Level 5:colcon.colcon_core.verb:set package 'zed_ros2' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[6.283s] Level 5:colcon.colcon_core.verb:set package 'zed_ros2' build argument 'cmake_clean_cache' from command line to 'False'
+[6.283s] Level 5:colcon.colcon_core.verb:set package 'zed_ros2' build argument 'cmake_clean_first' from command line to 'False'
+[6.283s] Level 5:colcon.colcon_core.verb:set package 'zed_ros2' build argument 'cmake_force_configure' from command line to 'False'
+[6.283s] Level 5:colcon.colcon_core.verb:set package 'zed_ros2' build argument 'ament_cmake_args' from command line to 'None'
+[6.283s] Level 5:colcon.colcon_core.verb:set package 'zed_ros2' build argument 'catkin_cmake_args' from command line to 'None'
+[6.283s] Level 5:colcon.colcon_core.verb:set package 'zed_ros2' build argument 'catkin_skip_building_tests' from command line to 'False'
+[6.283s] DEBUG:colcon.colcon_core.verb:Building package 'zed_ros2' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/build/zed_ros2', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_ros2', 'merge_install': False, 'path': '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/zed_ros2', 'symlink_install': False, 'test_result_base': None}
+[6.308s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[6.336s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[6.336s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/zed-ros2-interfaces' with build type 'ament_cmake'
+[6.337s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/zed-ros2-interfaces'
+[6.367s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[6.367s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[6.367s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[6.439s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/build/zed_interfaces': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/zed-ros2-interfaces -DCMAKE_INSTALL_PREFIX=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces
+[11.069s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/build/zed_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/zed-ros2-interfaces -DCMAKE_INSTALL_PREFIX=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces
+[11.077s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/build/zed_interfaces': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/build/zed_interfaces -- -j6 -l6
+[43.387s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/build/zed_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/build/zed_interfaces -- -j6 -l6
+[43.987s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/build/zed_interfaces': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/build/zed_interfaces
+[44.262s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(zed_interfaces)
+[44.263s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/build/zed_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/build/zed_interfaces
+[44.295s] Level 1:colcon.colcon_core.environment:checking '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces' for CMake module files
+[44.297s] Level 1:colcon.colcon_core.environment:checking '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces' for CMake config files
+[44.298s] Level 1:colcon.colcon_core.shell:create_environment_hook('zed_interfaces', 'cmake_prefix_path')
+[44.324s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/share/zed_interfaces/hook/cmake_prefix_path.ps1'
+[44.326s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/share/zed_interfaces/hook/cmake_prefix_path.dsv'
+[44.327s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/share/zed_interfaces/hook/cmake_prefix_path.sh'
+[44.329s] Level 1:colcon.colcon_core.environment:checking '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/lib'
+[44.329s] Level 1:colcon.colcon_core.shell:create_environment_hook('zed_interfaces', 'ld_library_path_lib')
+[44.355s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/share/zed_interfaces/hook/ld_library_path_lib.ps1'
+[44.356s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/share/zed_interfaces/hook/ld_library_path_lib.dsv'
+[44.356s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/share/zed_interfaces/hook/ld_library_path_lib.sh'
+[44.357s] Level 1:colcon.colcon_core.environment:checking '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/bin'
+[44.357s] Level 1:colcon.colcon_core.environment:checking '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/lib/pkgconfig/zed_interfaces.pc'
+[44.358s] Level 1:colcon.colcon_core.environment:checking '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/lib/python3.8/site-packages'
+[44.358s] Level 1:colcon.colcon_core.shell:create_environment_hook('zed_interfaces', 'pythonpath')
+[44.383s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/share/zed_interfaces/hook/pythonpath.ps1'
+[44.384s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/share/zed_interfaces/hook/pythonpath.dsv'
+[44.385s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/share/zed_interfaces/hook/pythonpath.sh'
+[44.386s] Level 1:colcon.colcon_core.environment:checking '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/bin'
+[44.413s] INFO:colcon.colcon_core.shell:Creating package script '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/share/zed_interfaces/package.ps1'
+[44.414s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/share/zed_interfaces/package.dsv'
+[44.415s] INFO:colcon.colcon_core.shell:Creating package script '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/share/zed_interfaces/package.sh'
+[44.417s] INFO:colcon.colcon_core.shell:Creating package script '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/share/zed_interfaces/package.bash'
+[44.418s] INFO:colcon.colcon_core.shell:Creating package script '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/share/zed_interfaces/package.zsh'
+[44.419s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/share/colcon-core/packages/zed_interfaces)
+[45.012s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(zed_interfaces)
+[45.038s] Level 1:colcon.colcon_core.environment:checking '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces' for CMake module files
+[45.039s] Level 1:colcon.colcon_core.environment:checking '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces' for CMake config files
+[45.041s] Level 1:colcon.colcon_core.shell:create_environment_hook('zed_interfaces', 'cmake_prefix_path')
+[45.066s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/share/zed_interfaces/hook/cmake_prefix_path.ps1'
+[45.067s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/share/zed_interfaces/hook/cmake_prefix_path.dsv'
+[45.068s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/share/zed_interfaces/hook/cmake_prefix_path.sh'
+[45.069s] Level 1:colcon.colcon_core.environment:checking '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/lib'
+[45.069s] Level 1:colcon.colcon_core.shell:create_environment_hook('zed_interfaces', 'ld_library_path_lib')
+[45.095s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/share/zed_interfaces/hook/ld_library_path_lib.ps1'
+[45.096s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/share/zed_interfaces/hook/ld_library_path_lib.dsv'
+[45.097s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/share/zed_interfaces/hook/ld_library_path_lib.sh'
+[45.098s] Level 1:colcon.colcon_core.environment:checking '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/bin'
+[45.098s] Level 1:colcon.colcon_core.environment:checking '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/lib/pkgconfig/zed_interfaces.pc'
+[45.098s] Level 1:colcon.colcon_core.environment:checking '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/lib/python3.8/site-packages'
+[45.098s] Level 1:colcon.colcon_core.shell:create_environment_hook('zed_interfaces', 'pythonpath')
+[45.124s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/share/zed_interfaces/hook/pythonpath.ps1'
+[45.125s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/share/zed_interfaces/hook/pythonpath.dsv'
+[45.125s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/share/zed_interfaces/hook/pythonpath.sh'
+[45.126s] Level 1:colcon.colcon_core.environment:checking '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/bin'
+[45.153s] INFO:colcon.colcon_core.shell:Creating package script '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/share/zed_interfaces/package.ps1'
+[45.154s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/share/zed_interfaces/package.dsv'
+[45.155s] INFO:colcon.colcon_core.shell:Creating package script '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/share/zed_interfaces/package.sh'
+[45.156s] INFO:colcon.colcon_core.shell:Creating package script '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/share/zed_interfaces/package.bash'
+[45.157s] INFO:colcon.colcon_core.shell:Creating package script '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/share/zed_interfaces/package.zsh'
+[45.157s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/share/colcon-core/packages/zed_interfaces)
+[45.158s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/zed_components' with build type 'ament_cmake'
+[45.159s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/zed_components'
+[45.187s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[45.187s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[45.265s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/build/zed_components': AMENT_PREFIX_PATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces:/opt/ros/foxy LD_LIBRARY_PATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.4/lib64:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib PYTHONPATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/usr/lib/python3.8/site-packages/range_libc-0.1-py3.8-linux-aarch64.egg /usr/bin/cmake /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/zed_components -DCMAKE_INSTALL_PREFIX=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components
+[49.302s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/build/zed_components' returned '0': AMENT_PREFIX_PATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces:/opt/ros/foxy LD_LIBRARY_PATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.4/lib64:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib PYTHONPATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/usr/lib/python3.8/site-packages/range_libc-0.1-py3.8-linux-aarch64.egg /usr/bin/cmake /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/zed_components -DCMAKE_INSTALL_PREFIX=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components
+[49.309s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/build/zed_components': AMENT_PREFIX_PATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces:/opt/ros/foxy LD_LIBRARY_PATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.4/lib64:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib PYTHONPATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/usr/lib/python3.8/site-packages/range_libc-0.1-py3.8-linux-aarch64.egg /usr/bin/cmake --build /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/build/zed_components -- -j6 -l6
+[183.662s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/build/zed_components' returned '0': AMENT_PREFIX_PATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces:/opt/ros/foxy LD_LIBRARY_PATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.4/lib64:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib PYTHONPATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/usr/lib/python3.8/site-packages/range_libc-0.1-py3.8-linux-aarch64.egg /usr/bin/cmake --build /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/build/zed_components -- -j6 -l6
+[183.727s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/build/zed_components': AMENT_PREFIX_PATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces:/opt/ros/foxy LD_LIBRARY_PATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.4/lib64:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib PYTHONPATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/usr/lib/python3.8/site-packages/range_libc-0.1-py3.8-linux-aarch64.egg /usr/bin/cmake --install /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/build/zed_components
+[183.777s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(zed_components)
+[183.779s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/build/zed_components' returned '0': AMENT_PREFIX_PATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces:/opt/ros/foxy LD_LIBRARY_PATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.4/lib64:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib PYTHONPATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/usr/lib/python3.8/site-packages/range_libc-0.1-py3.8-linux-aarch64.egg /usr/bin/cmake --install /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/build/zed_components
+[183.901s] Level 1:colcon.colcon_core.environment:checking '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components' for CMake module files
+[183.902s] Level 1:colcon.colcon_core.environment:checking '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components' for CMake config files
+[183.902s] Level 1:colcon.colcon_core.shell:create_environment_hook('zed_components', 'cmake_prefix_path')
+[183.929s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/share/zed_components/hook/cmake_prefix_path.ps1'
+[183.931s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/share/zed_components/hook/cmake_prefix_path.dsv'
+[183.932s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/share/zed_components/hook/cmake_prefix_path.sh'
+[183.933s] Level 1:colcon.colcon_core.environment:checking '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/lib'
+[183.933s] Level 1:colcon.colcon_core.shell:create_environment_hook('zed_components', 'ld_library_path_lib')
+[183.960s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/share/zed_components/hook/ld_library_path_lib.ps1'
+[183.961s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/share/zed_components/hook/ld_library_path_lib.dsv'
+[183.961s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/share/zed_components/hook/ld_library_path_lib.sh'
+[183.962s] Level 1:colcon.colcon_core.environment:checking '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/bin'
+[183.962s] Level 1:colcon.colcon_core.environment:checking '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/lib/pkgconfig/zed_components.pc'
+[183.963s] Level 1:colcon.colcon_core.environment:checking '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/lib/python3.8/site-packages'
+[183.963s] Level 1:colcon.colcon_core.environment:checking '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/bin'
+[183.989s] INFO:colcon.colcon_core.shell:Creating package script '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/share/zed_components/package.ps1'
+[183.990s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/share/zed_components/package.dsv'
+[183.991s] INFO:colcon.colcon_core.shell:Creating package script '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/share/zed_components/package.sh'
+[183.992s] INFO:colcon.colcon_core.shell:Creating package script '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/share/zed_components/package.bash'
+[183.994s] INFO:colcon.colcon_core.shell:Creating package script '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/share/zed_components/package.zsh'
+[183.995s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/share/colcon-core/packages/zed_components)
+[184.083s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(zed_components)
+[184.109s] Level 1:colcon.colcon_core.environment:checking '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components' for CMake module files
+[184.110s] Level 1:colcon.colcon_core.environment:checking '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components' for CMake config files
+[184.111s] Level 1:colcon.colcon_core.shell:create_environment_hook('zed_components', 'cmake_prefix_path')
+[184.136s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/share/zed_components/hook/cmake_prefix_path.ps1'
+[184.137s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/share/zed_components/hook/cmake_prefix_path.dsv'
+[184.138s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/share/zed_components/hook/cmake_prefix_path.sh'
+[184.139s] Level 1:colcon.colcon_core.environment:checking '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/lib'
+[184.139s] Level 1:colcon.colcon_core.shell:create_environment_hook('zed_components', 'ld_library_path_lib')
+[184.165s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/share/zed_components/hook/ld_library_path_lib.ps1'
+[184.166s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/share/zed_components/hook/ld_library_path_lib.dsv'
+[184.166s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/share/zed_components/hook/ld_library_path_lib.sh'
+[184.167s] Level 1:colcon.colcon_core.environment:checking '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/bin'
+[184.167s] Level 1:colcon.colcon_core.environment:checking '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/lib/pkgconfig/zed_components.pc'
+[184.168s] Level 1:colcon.colcon_core.environment:checking '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/lib/python3.8/site-packages'
+[184.168s] Level 1:colcon.colcon_core.environment:checking '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/bin'
+[184.194s] INFO:colcon.colcon_core.shell:Creating package script '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/share/zed_components/package.ps1'
+[184.195s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/share/zed_components/package.dsv'
+[184.196s] INFO:colcon.colcon_core.shell:Creating package script '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/share/zed_components/package.sh'
+[184.197s] INFO:colcon.colcon_core.shell:Creating package script '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/share/zed_components/package.bash'
+[184.198s] INFO:colcon.colcon_core.shell:Creating package script '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/share/zed_components/package.zsh'
+[184.199s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/share/colcon-core/packages/zed_components)
+[184.200s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/zed_wrapper' with build type 'ament_cmake'
+[184.200s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/zed_wrapper'
+[184.228s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[184.228s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[184.311s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/build/zed_wrapper': AMENT_PREFIX_PATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components:/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components:/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces:/opt/ros/foxy LD_LIBRARY_PATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/lib:/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.4/lib64:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib PYTHONPATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/usr/lib/python3.8/site-packages/range_libc-0.1-py3.8-linux-aarch64.egg /usr/bin/cmake /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/zed_wrapper -DCMAKE_INSTALL_PREFIX=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper
+[191.814s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/build/zed_wrapper' returned '0': AMENT_PREFIX_PATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components:/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components:/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces:/opt/ros/foxy LD_LIBRARY_PATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/lib:/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.4/lib64:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib PYTHONPATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/usr/lib/python3.8/site-packages/range_libc-0.1-py3.8-linux-aarch64.egg /usr/bin/cmake /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/zed_wrapper -DCMAKE_INSTALL_PREFIX=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper
+[191.822s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/build/zed_wrapper': AMENT_PREFIX_PATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components:/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components:/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces:/opt/ros/foxy LD_LIBRARY_PATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/lib:/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.4/lib64:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib PYTHONPATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/usr/lib/python3.8/site-packages/range_libc-0.1-py3.8-linux-aarch64.egg /usr/bin/cmake --build /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/build/zed_wrapper -- -j6 -l6
+[200.775s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/build/zed_wrapper' returned '0': AMENT_PREFIX_PATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components:/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components:/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces:/opt/ros/foxy LD_LIBRARY_PATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/lib:/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.4/lib64:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib PYTHONPATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/usr/lib/python3.8/site-packages/range_libc-0.1-py3.8-linux-aarch64.egg /usr/bin/cmake --build /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/build/zed_wrapper -- -j6 -l6
+[200.836s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/build/zed_wrapper': AMENT_PREFIX_PATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components:/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components:/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces:/opt/ros/foxy LD_LIBRARY_PATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/lib:/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.4/lib64:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib PYTHONPATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/usr/lib/python3.8/site-packages/range_libc-0.1-py3.8-linux-aarch64.egg /usr/bin/cmake --install /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/build/zed_wrapper
+[200.871s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(zed_wrapper)
+[200.873s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/build/zed_wrapper' returned '0': AMENT_PREFIX_PATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components:/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components:/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces:/opt/ros/foxy LD_LIBRARY_PATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/lib:/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.4/lib64:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib PYTHONPATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/usr/lib/python3.8/site-packages/range_libc-0.1-py3.8-linux-aarch64.egg /usr/bin/cmake --install /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/build/zed_wrapper
+[200.901s] Level 1:colcon.colcon_core.environment:checking '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper' for CMake module files
+[200.902s] Level 1:colcon.colcon_core.environment:checking '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper' for CMake config files
+[200.903s] Level 1:colcon.colcon_core.shell:create_environment_hook('zed_wrapper', 'cmake_prefix_path')
+[200.930s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper/share/zed_wrapper/hook/cmake_prefix_path.ps1'
+[200.931s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper/share/zed_wrapper/hook/cmake_prefix_path.dsv'
+[200.932s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper/share/zed_wrapper/hook/cmake_prefix_path.sh'
+[200.933s] Level 1:colcon.colcon_core.environment:checking '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper/lib'
+[200.933s] Level 1:colcon.colcon_core.environment:checking '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper/bin'
+[200.933s] Level 1:colcon.colcon_core.environment:checking '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper/lib/pkgconfig/zed_wrapper.pc'
+[200.934s] Level 1:colcon.colcon_core.environment:checking '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper/lib/python3.8/site-packages'
+[200.934s] Level 1:colcon.colcon_core.environment:checking '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper/bin'
+[200.961s] INFO:colcon.colcon_core.shell:Creating package script '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper/share/zed_wrapper/package.ps1'
+[200.962s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper/share/zed_wrapper/package.dsv'
+[200.963s] INFO:colcon.colcon_core.shell:Creating package script '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper/share/zed_wrapper/package.sh'
+[200.963s] INFO:colcon.colcon_core.shell:Creating package script '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper/share/zed_wrapper/package.bash'
+[200.964s] INFO:colcon.colcon_core.shell:Creating package script '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper/share/zed_wrapper/package.zsh'
+[200.965s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper/share/colcon-core/packages/zed_wrapper)
+[201.046s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(zed_wrapper)
+[201.072s] Level 1:colcon.colcon_core.environment:checking '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper' for CMake module files
+[201.073s] Level 1:colcon.colcon_core.environment:checking '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper' for CMake config files
+[201.074s] Level 1:colcon.colcon_core.shell:create_environment_hook('zed_wrapper', 'cmake_prefix_path')
+[201.099s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper/share/zed_wrapper/hook/cmake_prefix_path.ps1'
+[201.100s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper/share/zed_wrapper/hook/cmake_prefix_path.dsv'
+[201.101s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper/share/zed_wrapper/hook/cmake_prefix_path.sh'
+[201.102s] Level 1:colcon.colcon_core.environment:checking '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper/lib'
+[201.103s] Level 1:colcon.colcon_core.environment:checking '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper/bin'
+[201.103s] Level 1:colcon.colcon_core.environment:checking '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper/lib/pkgconfig/zed_wrapper.pc'
+[201.103s] Level 1:colcon.colcon_core.environment:checking '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper/lib/python3.8/site-packages'
+[201.103s] Level 1:colcon.colcon_core.environment:checking '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper/bin'
+[201.131s] INFO:colcon.colcon_core.shell:Creating package script '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper/share/zed_wrapper/package.ps1'
+[201.132s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper/share/zed_wrapper/package.dsv'
+[201.133s] INFO:colcon.colcon_core.shell:Creating package script '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper/share/zed_wrapper/package.sh'
+[201.134s] INFO:colcon.colcon_core.shell:Creating package script '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper/share/zed_wrapper/package.bash'
+[201.135s] INFO:colcon.colcon_core.shell:Creating package script '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper/share/zed_wrapper/package.zsh'
+[201.135s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper/share/colcon-core/packages/zed_wrapper)
+[201.136s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/zed_ros2' with build type 'ament_cmake'
+[201.137s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/zed_ros2'
+[201.168s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[201.168s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[201.251s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/build/zed_ros2': AMENT_PREFIX_PATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper:/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components:/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper:/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components:/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces:/opt/ros/foxy LD_LIBRARY_PATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/lib:/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.4/lib64:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib PYTHONPATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/usr/lib/python3.8/site-packages/range_libc-0.1-py3.8-linux-aarch64.egg /usr/bin/cmake /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/zed_ros2 -DCMAKE_INSTALL_PREFIX=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_ros2
+[202.007s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/build/zed_ros2' returned '0': AMENT_PREFIX_PATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper:/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components:/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper:/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components:/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces:/opt/ros/foxy LD_LIBRARY_PATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/lib:/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.4/lib64:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib PYTHONPATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/usr/lib/python3.8/site-packages/range_libc-0.1-py3.8-linux-aarch64.egg /usr/bin/cmake /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/zed_ros2 -DCMAKE_INSTALL_PREFIX=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_ros2
+[202.013s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/build/zed_ros2': AMENT_PREFIX_PATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper:/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components:/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper:/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components:/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces:/opt/ros/foxy LD_LIBRARY_PATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/lib:/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.4/lib64:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib PYTHONPATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/usr/lib/python3.8/site-packages/range_libc-0.1-py3.8-linux-aarch64.egg /usr/bin/cmake --build /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/build/zed_ros2 -- -j6 -l6
+[202.097s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/build/zed_ros2' returned '0': AMENT_PREFIX_PATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper:/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components:/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper:/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components:/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces:/opt/ros/foxy LD_LIBRARY_PATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/lib:/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.4/lib64:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib PYTHONPATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/usr/lib/python3.8/site-packages/range_libc-0.1-py3.8-linux-aarch64.egg /usr/bin/cmake --build /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/build/zed_ros2 -- -j6 -l6
+[202.149s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/build/zed_ros2': AMENT_PREFIX_PATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper:/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components:/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper:/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components:/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces:/opt/ros/foxy LD_LIBRARY_PATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/lib:/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.4/lib64:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib PYTHONPATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/usr/lib/python3.8/site-packages/range_libc-0.1-py3.8-linux-aarch64.egg /usr/bin/cmake --install /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/build/zed_ros2
+[202.177s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(zed_ros2)
+[202.178s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/build/zed_ros2' returned '0': AMENT_PREFIX_PATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper:/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components:/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_wrapper:/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components:/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces:/opt/ros/foxy LD_LIBRARY_PATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components/lib:/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.4/lib64:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib PYTHONPATH=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/usr/lib/python3.8/site-packages/range_libc-0.1-py3.8-linux-aarch64.egg /usr/bin/cmake --install /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/build/zed_ros2
+[202.206s] Level 1:colcon.colcon_core.environment:checking '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_ros2' for CMake module files
+[202.207s] Level 1:colcon.colcon_core.environment:checking '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_ros2' for CMake config files
+[202.207s] Level 1:colcon.colcon_core.shell:create_environment_hook('zed_ros2', 'cmake_prefix_path')
+[202.233s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_ros2/share/zed_ros2/hook/cmake_prefix_path.ps1'
+[202.234s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_ros2/share/zed_ros2/hook/cmake_prefix_path.dsv'
+[202.235s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_ros2/share/zed_ros2/hook/cmake_prefix_path.sh'
+[202.236s] Level 1:colcon.colcon_core.environment:checking '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_ros2/bin'
+[202.236s] Level 1:colcon.colcon_core.environment:checking '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_ros2/lib/pkgconfig/zed_ros2.pc'
+[202.236s] Level 1:colcon.colcon_core.environment:checking '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_ros2/lib/python3.8/site-packages'
+[202.237s] Level 1:colcon.colcon_core.environment:checking '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_ros2/bin'
+[202.263s] INFO:colcon.colcon_core.shell:Creating package script '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_ros2/share/zed_ros2/package.ps1'
+[202.264s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_ros2/share/zed_ros2/package.dsv'
+[202.265s] INFO:colcon.colcon_core.shell:Creating package script '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_ros2/share/zed_ros2/package.sh'
+[202.265s] INFO:colcon.colcon_core.shell:Creating package script '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_ros2/share/zed_ros2/package.bash'
+[202.266s] INFO:colcon.colcon_core.shell:Creating package script '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_ros2/share/zed_ros2/package.zsh'
+[202.267s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_ros2/share/colcon-core/packages/zed_ros2)
+[202.340s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(zed_ros2)
+[202.366s] Level 1:colcon.colcon_core.environment:checking '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_ros2' for CMake module files
+[202.367s] Level 1:colcon.colcon_core.environment:checking '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_ros2' for CMake config files
+[202.367s] Level 1:colcon.colcon_core.shell:create_environment_hook('zed_ros2', 'cmake_prefix_path')
+[202.393s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_ros2/share/zed_ros2/hook/cmake_prefix_path.ps1'
+[202.394s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_ros2/share/zed_ros2/hook/cmake_prefix_path.dsv'
+[202.395s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_ros2/share/zed_ros2/hook/cmake_prefix_path.sh'
+[202.396s] Level 1:colcon.colcon_core.environment:checking '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_ros2/bin'
+[202.396s] Level 1:colcon.colcon_core.environment:checking '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_ros2/lib/pkgconfig/zed_ros2.pc'
+[202.396s] Level 1:colcon.colcon_core.environment:checking '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_ros2/lib/python3.8/site-packages'
+[202.397s] Level 1:colcon.colcon_core.environment:checking '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_ros2/bin'
+[202.423s] INFO:colcon.colcon_core.shell:Creating package script '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_ros2/share/zed_ros2/package.ps1'
+[202.425s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_ros2/share/zed_ros2/package.dsv'
+[202.426s] INFO:colcon.colcon_core.shell:Creating package script '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_ros2/share/zed_ros2/package.sh'
+[202.426s] INFO:colcon.colcon_core.shell:Creating package script '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_ros2/share/zed_ros2/package.bash'
+[202.427s] INFO:colcon.colcon_core.shell:Creating package script '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_ros2/share/zed_ros2/package.zsh'
+[202.428s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_ros2/share/colcon-core/packages/zed_ros2)
+[202.429s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[202.430s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[202.430s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[202.430s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[202.474s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[202.474s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[202.474s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[202.512s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[202.540s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/local_setup.ps1'
+[202.542s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/_local_setup_util_ps1.py'
+[202.544s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/setup.ps1'
+[202.573s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/local_setup.sh'
+[202.574s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/_local_setup_util_sh.py'
+[202.575s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/setup.sh'
+[202.603s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/local_setup.bash'
+[202.604s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/setup.bash'
+[202.632s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/local_setup.zsh'
+[202.633s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/setup.zsh'

@@ -1,0 +1,2 @@
+Invoking command in '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/build/zed_components': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/zed_components -DCMAKE_INSTALL_PREFIX=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components
+Invoked command in '/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/build/zed_components' returned '1': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/f1tenth/zed-ros2-wrapper-foxy-v3.7/src/zed_components -DCMAKE_INSTALL_PREFIX=/home/f1tenth/zed-ros2-wrapper-foxy-v3.7/install/zed_components
