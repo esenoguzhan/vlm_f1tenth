@@ -16,7 +16,7 @@ The system follows a layered architecture:
 
 ## Prerequisites
 
-- ROS 2 (installed and sourced)
+- ROS 2 FOXY (installed and sourced)
 - A built ROS 2 workspace (example: `~/ros2_ws`)
 - ZED camera and `zed_wrapper` installed
 - Network connectivity if using an external LLM (e.g., Mac → car)
