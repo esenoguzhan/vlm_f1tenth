@@ -3,7 +3,7 @@
 
 This repository provides a **ROS 2–based autonomous driving software stack for the F1TENTH platform**, built around **foundational models (VLM/LLM)** for high-level decision making, combined with classical perception, localization, and control modules.
 
-![System Architecture](images\system_architecture.png)
+![System Architecture](images/system_architecture.png)
 
 
 The system follows a layered architecture:
