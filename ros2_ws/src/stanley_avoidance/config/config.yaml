@@ -1,0 +1,3 @@
+waypoint_visualizer_node:
+  ros__parameters:
+    waypoints_path: "/home/f1tenth/lab_ws25/src/stanley_avoidance/racelines/min_curve.csv"
