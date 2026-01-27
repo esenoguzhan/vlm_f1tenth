@@ -1,7 +1,0 @@
-numpy
-sounddevice
-SpeechRecognition
-roslibpy
-torch
-transformers
-accelerate
