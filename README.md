@@ -4,7 +4,11 @@
 This repository provides a **ROS 2–based autonomous driving software stack for the F1TENTH platform**, built around **foundational models (VLM/LLM)** for high-level decision making, combined with classical perception, localization, and control modules.
 ## VLM Demo
 Autonomous overtaking demonstrated using a Vision–Language Model (VLM)
-https://github.com/user-attachments/assets/b449db98-3273-43d6-a713-03948ae427ae
+
+
+https://github.com/user-attachments/assets/653e2dc3-d3ab-465b-a714-c8a0c4535cf7
+
+
 ## LLM Demo
 Voice commands are provided to the vehicle, and an LLM generates high-level driving decisions in response.
 In the video below, behaviors such as driving profile selection and lane changes are triggered by spoken commands.
@@ -92,6 +96,7 @@ ros2 launch rosbridge_server rosbridge_websocket_launch.xml
 This bridge allows WebSocket-based communication between the external VLM client and the ROS 2 ecosystem on the vehicle.
 
 Multi-Device Networking: Ensure all machines are on the same local network and are using the same ROS_DOMAIN_ID. If nodes cannot "see" each other, check your firewall settings and export the domain ID: export ROS_DOMAIN_ID=X.
+
 
 
 
