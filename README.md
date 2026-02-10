@@ -13,6 +13,11 @@ The system follows a layered architecture:
 - **Interface**: ROS bridge for external LLM communication
 
 ---
+##VLM Demo
+
+https://github.com/user-attachments/assets/b449db98-3273-43d6-a713-03948ae427ae
+
+
 
 ## Prerequisites
 
@@ -76,5 +81,6 @@ ros2 launch rosbridge_server rosbridge_websocket_launch.xml
 This bridge allows WebSocket-based communication between the external VLM client and the ROS 2 ecosystem on the vehicle.
 
 Multi-Device Networking: Ensure all machines are on the same local network and are using the same ROS_DOMAIN_ID. If nodes cannot "see" each other, check your firewall settings and export the domain ID: export ROS_DOMAIN_ID=X.
+
 
 
